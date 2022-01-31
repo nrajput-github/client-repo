@@ -3,6 +3,7 @@ import Typical from "react-typical";
 import '../../../index.css';
 import './Profile.css';
 import '../../../App.css'
+import ScrollService from "../../../utillities/ScrollService";
 
 export default function Profile() {
   return (
@@ -36,7 +37,6 @@ export default function Profile() {
             <span className="primary-text">
               {" "}
               <h1>
-                {" "}
                 <Typical
                   loop={Infinity}
                   steps={[
@@ -60,10 +60,8 @@ export default function Profile() {
             </span>
           </div>
           <div className="profile-options">
-            <button className="btn-primary-btn">
-              {""}
-              Hire Me{" "}
-            </button>
+            <button className="btn-primary-btn"
+            onClick={() => ScrollService.scrollHandler.scrollToHireMe()}>Hire Me</button>
             <a href="navya.pdf" download="Navya Rajput.pdf">
               <button className="btn-highlighted-btn">Get Resume</button>
             </a>

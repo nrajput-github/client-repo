@@ -1,45 +1,49 @@
-import React, { useState } from "react";
-import ScreenHeading from "../../utillities/ScreenHeading/ScreenHeading";
-import ScrollService from "../../utillities/ScrollService";
-import Animations from "../../utillities/Animations";
+import React, { useState, useEffect } from "react";
+import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
+import ScrollService from "../../utilities/ScrollService";
+import Animations from "../../utilities/Animations";
 import "./Resume.css";
+import shapebg from "../../../src/img/Testimonial/shape-bg.png";
 
-export default function Resume(props) {
-  const [selectBulletIndex, setSelectBulletIndex] = useState(0);
-  const [carousalOffSetStyle, setCarousalOffSetStyle] = useState({});
+const Resume = (props) => {
+  /* STATES */
+  const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
+  const [carousalOffsetStyle, setCarousalOffsetStyle] = useState({});
 
   let fadeInScreenHandler = (screen) => {
     if (screen.fadeInScreen !== props.id) return;
+
     Animations.animations.fadeInScreen(props.id);
   };
   const fadeInSubscription =
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
+  /* REUSABLE MINOR COMPONENTS */
   const ResumeHeading = (props) => {
     return (
       <div className="resume-heading">
         <div className="resume-main-heading">
-          <div className="heading-bullet">
-            <span>{props.heading ? props.heading : ""}</span>
-            {props.fromDate && props.toDate ? (
-              <div className="heading-date">
-                {props.fromDate + "_" + props.toDate}
-              </div>
-            ) : (
-              <div></div>
-            )}
-          </div>
-          <div className="resume-sub-heading">
-            <span>{props.subHeading ? props.subHeading : ""}</span>
-          </div>
-          <div className="resume-heading-description">
-            <span>{props.description ? props.description : ""}</span>
-          </div>
+          <div className="heading-bullet"></div>
+          <span>{props.heading ? props.heading : ""}</span>
+          {props.fromDate && props.toDate ? (
+            <div className="heading-date">
+              {props.fromDate + "-" + props.toDate}
+            </div>
+          ) : (
+            <div></div>
+          )}
+        </div>
+        <div className="resume-sub-heading">
+          <span>{props.subHeading ? props.subHeading : ""}</span>
+        </div>
+        <div className="resume-heading-description">
+          <span>{props.description ? props.description : ""}</span>
         </div>
       </div>
     );
   };
 
+  /* STATIC RESUME DATA */
   const resumeBullets = [
     { label: "Education", logoSrc: "education.svg" },
     { label: "Work History", logoSrc: "work-history.svg" },
@@ -47,166 +51,220 @@ export default function Resume(props) {
     { label: "Projects", logoSrc: "projects.svg" },
     { label: "Interests", logoSrc: "interests.svg" },
   ];
+
   const programmingSkillsDetails = [
-    { skill: "Javascript", ratingPercentage: 60 },
-    { skill: "React", ratingPercentage: 60 },
-    { skill: "HTML", ratingPercentage: 60 },
-    { skill: "CSS", ratingPercentage: 60 },
-    { skill: "Saas", ratingPercentage: 60 },
-    { skill: "Node.js", ratingPercentage: 60 },
-    { skill: "Redux", ratingPercentage: 60 },
-    { skill: "Bootstrap", ratingPercentage: 60 },
-    { skill: "Express.js", ratingPercentage: 60 },
+    { skill: "JavaScript", ratingPercentage: 85 },
+    { skill: "React JS", ratingPercentage: 85 },
+    { skill: "React Native", ratingPercentage: 85 },
+    { skill: "Express JS", ratingPercentage: 89 },
+    { skill: "Node JS", ratingPercentage: 89 },
+    { skill: "HTML", ratingPercentage: 80 },
+    { skill: "CSS", ratingPercentage: 80 },
   ];
 
   const projectsDetails = [
     {
       title: "Personal Portfolio Website",
-      duration: { fromDate: 2021, toDate: 2021 },
-      description:
-        "A personal portfolio website which shows my all professional details, projects, skills and resume.",
-      subHeading: "Technology used: Javascript, react.js, bootstrap.",
+      duration: { fromDate: "2021", toDate: "2021" },
+      // description:
+      //   "A Personal Portfolio website to show my all detials experience and skills",
+      // subHeading: "Tech Stack: React JS, Bootsrap.",
     },
     {
-      title: "YelpLike",
-      duration: { fromDate: 2021, toDate: 2021 },
-      description: "Restaurant Reviews app.",
-      subHeading:
-        "Technology used: Ruby, Rails, Javascript, React, CSS and Bootstrap.",
+      title: "YelpLike ",
+      duration: { fromDate: "2021", toDate: "2021" },
+      // description:
+      //   "Created a full-stack single-page application where users can check reviews and comments of a particular restaurant and can give and manage their own reviews after sign-in app.",
+      // subHeading:
+      //   "Tech Stack: Ruby, Rails, Javascript, React, HTML/CSS, Bootstrap, Google Map API.",
     },
     {
-      title: "TinyApp",
-      duration: { fromDate: 2021, toDate: 2021 },
-      description:
-        "A full stack web application built with Node and Express that allows users to shorten long URLs (à la bit.ly)",
-      subHeading: "Technology used: HTML, CSS, JS, jQuery and AJAX.",
+      title: "Tweeter ",
+      duration: { fromDate: "2021", toDate: "2021" },
+      // description:
+      //   "Implemented a client-side single-page App, which communicates with a server via AJAX, Where users can write, post by their name, delete their own tweets, and displays tweets in reverse- chronological order.",
+      // subHeading: "Tech Stack: HTML, CSS, JS, jQuery and AJAX.",
     },
     {
-      title: "Tweeter",
-      duration: { fromDate: 2021, toDate: 2021 },
-      description: "A single page app where users can tweet by their name.",
-      subHeading: "Technology used: Javascript, react.js, bootstrap.",
+      title: "QuizApp ",
+      duration: { fromDate: "2021", toDate: "2021" },
+      // description:
+      //   "An application that allows users to attempt quizzes.Users can see a list of public quizzes on the home page and can see the results of their recent attempts.",
+      // subHeading:
+      //   "Tech Stack: EJS, Javascript, Ajax, Express, Jquery, HTML/CSS, Saas, BootStrap, and PostgreSQL.",
     },
-    {
-      title: "Scheduler",
-      duration: { fromDate: 2021, toDate: 2021 },
-      description:
-        "A single page application that allows users to book and cancel interviews.",
-      subHeading:
-        "Technology used: React, Axios, Classnames, Normalize, Storybook, Babel",
-    },
-    {
-      title: "QuizApp",
-      duration: { fromDate: 2021, toDate: 2021 },
-      description:
-        "A single page app where users can create quizzes, users can make their quiz unlisted (make them private and not available on the home page, but if someone knows the quiz URL they can visit and take the quiz)",
-      subHeading: "Technology used: Javascript, HTML, CSS and bootstrap.",
-    },
-    ];
-   
+  ];
+
   const resumeDetails = [
-    <div className="resume-screen-container" key="education">
-      <ResumeHeading
-        heading={"Diploma in Full-Stack-Web-Development"}
-        subHeading={"Lighthouse Labs,Ottawa, ON"}
-        fromDate={"2021"}
-        toDate={"2021"}
-      />
-      <ResumeHeading
-        heading={"Masters in Business Administration"}
-        subHeading={"Jayoti Vidhyapeeth Women's University, Jaipur, India"}
-        fromDate={"2010"}
+    /* EDUCATION */
+    <div
+      className="resume-screen-container education-container"
+      key="education"
+    >
+      <span>
+        <br />
+        <span />
+        <ResumeHeading
+          heading={"Lighthouse Labs, Ottawa"}
+          subHeading={"Full-Stack Web Development"}
+          fromDate={"2021"}
+          toDate={"2021"}
+        />
+      </span>
+      <br />
+      <span>
+        <ResumeHeading
+          heading={"Jayoti Vidhyapeeth Women's University, Jaipur"}
+          subHeading={"Masters of Business Administration"}
+          fromDate={"2011"}
+          toDate={"2013"}
+        />
+      </span>
+
+      {/* <ResumeHeading
+        heading={"High School "}
+        subHeading={"Command Secondary School Mbiri"}
+        fromDate={"2007"}
         toDate={"2012"}
-      />
+      /> */}
     </div>,
-    <div className="resume-screen-container" key="work-experience">
-      <ResumeHeading
-        heading={"Freelancing, Ottawa, ON"}
-        subHeading={"Freelancer"}
-        fromDate={"2021"}
-        toDate={"present"}
-      />
-      <div className="experience-description">
-        <span className="resume-description-text">
-          Currently working as a freelancer on a law firms's project.
-        </span>
+
+    /* WORK EXPERIENCE */
+    <div
+      className="resume-screen-container work-experience-container"
+      key="work-experience"
+    >
+      <div className="experience-container">
+        <ResumeHeading
+          heading={"Freelancing"}
+          subHeading={"FRONT END DEVELOPER"}
+          fromDate={"2021"}
+          toDate={"Present"}
+        />
+        <div className="experience-description">
+          <span className="resume-description-text">
+            - Currently working as a front-end web developer and my role
+            involves developing and testing the React.js frontend. The website
+            involves sign-in and prompting users to answer a series of
+            questions.On submission, the data is posted to a microservice
+            running on a separate server that interacts with a third-party API
+            and generates the pdf.
+          </span>
+        </div>
+
+        <ResumeHeading
+          heading={"Adecco Ottawa"}
+          subHeading={"Recruitment Assistant"}
+          fromDate={"2020"}
+          toDate={"2021"}
+        />
+        <div className="experience-description">
+          <span className="resume-description-text">
+            - Assisted senior recruiter in recruitment processes as search
+            candidates through ATS and scheduled interviews with the candidates.
+          </span>
+        </div>
+        {/* <div className="experience-container">
+        <ResumeHeading
+          heading={"Adecco Ottawa"}
+          subHeading={"Recruitment Assistant"}
+          fromDate={"2020"}
+          toDate={"2021"}
+        />
+        <div className="experience-description">
+          <span className="resume-description-text">
+            - Assisted senior recruiter in recruitment processes as search
+            candidates through ATS and scheduled interviews with the candidates.
+          </span>
+        </div> */}
+        {/* <div className="experience-description">
+          <span className="resume-description-text">
+            - The website involves sign-in and prompting users to answer a
+            series of questions.
+          </span>
+          <br />
+          <span className="resume-description-text">
+            - On submission, the data is posted to a microservice running on a
+            separate server that interacts with a third-party API and generates
+            the pdf.
+          </span>
+          <br />
+        </div> */}
       </div>
-      <div className="experience-description">
-        <span className="resume-description-text">
-          - Developing website with react.js as frontend and java spring-boot,
-          MySQL as backend.
-        </span>
-        <br />
-        <span className="resume-description-text">
-          - My role involves developing and testing the react frontend.
-        </span>
-        <br />
-        <span className="resume-description-text">
-          - Experience using Jira, git, and confluence.
-        </span>
-      </div>
-      ,
-      <div
-        className="resume-screen-container programming-skills-container"
-        key="programming-skills"
-      >
-        {programmingSkillsDetails.map((skill, index) => (
-          <div className="skill-parent" key={index}>
-            <div className="heading-bullet"></div>
-            <span>{skill.skill}</span>
-            <div className="skill-percentage">
-              <div
-                style={{ width: skill.ratingPercentage + "%" }}
-                className="active-percentage"
-              ></div>
-            </div>
+    </div>,
+    /* PROGRAMMING SKILLS */
+    <div
+      className="resume-screen-container programming-skills-container"
+      key="programming-skills"
+    >
+      {programmingSkillsDetails.map((skill, index) => (
+        <div className="skill-parent" key={index}>
+          <div className="heading-bullet"></div>
+          <span>{skill.skill}</span>
+          <div className="skill-percentage">
+            <div
+              style={{ width: skill.ratingPercentage + "%" }}
+              className="active-percentage-bar"
+            ></div>
           </div>
-        ))}
-      </div>
-      ,
-      <div className="resume-screen-container" key="projects">
-        {projectsDetails.map((projectsDetails, index) => (
-          <ResumeHeading
-            key={index}
-            heading={projectsDetails.title}
-            subHeading={projectsDetails.subHeading}
-            description={projectsDetails.description}
-            fromDate={projectsDetails.duration.fromDate}
-            toDate={projectsDetails.duration.toDate}
-          />
-        ))}
-      </div>
-      ,
-      <div className="resume-screen-container" key="interests">
+        </div>
+      ))}
+      <br />
+    </div>,
+
+    /* PROJECTS */
+
+    <div className="resume-screen-container projects-container" key="projects">
+      <span></span>
+      {projectsDetails.map((projectsDetails, index) => (
         <ResumeHeading
-          heading="Crafting"
-          description="Apart from it I love to do crafting like painting."
+          key={index}
+          heading={projectsDetails.title}
+          subHeading={projectsDetails.subHeading}
+          description={projectsDetails.description}
+          fromDate={projectsDetails.duration.fromDate}
+          toDate={projectsDetails.duration.toDate}
         />
-        <ResumeHeading
-          heading="Music"
-          description="Listening to soothing music."
-        />
-        <ResumeHeading
-          heading="Cooking"
-          description="Love to cook new dishes."
-        />
-      </div>
+      ))}
+    </div>,
+
+    /* Interests */
+    <div
+      className="resume-screen-container interests-container"
+      key="interests"
+    >
+      <ResumeHeading
+        heading="Teaching"
+        description="Apart from being a tech enthusiast and a code writer, i also love to teach people what i know simply because i believe in sharing."
+      />
+      <ResumeHeading
+        heading="Music"
+        description="Listening to soothing music is something i can never compromise with, skimming through Spotify's pop songs charts is at times the best stress reliever that i can get my hands on."
+      />
+      <ResumeHeading
+        heading="Competitive Gaming"
+        description="I like to challenge my reflexes a lot while competing in football games, pushing the rank and having interactive gaming sessions excites me the most."
+      />
     </div>,
   ];
+
   const handleCarousal = (index) => {
-    let offsetHeight = 360;
+    let offsetHeight = 330;
+
     let newCarousalOffset = {
       style: { transform: "translateY(" + index * offsetHeight * -1 + "px)" },
     };
-    setCarousalOffSetStyle(newCarousalOffset);
-    setSelectBulletIndex(index);
+
+    setCarousalOffsetStyle(newCarousalOffset);
+    setSelectedBulletIndex(index);
   };
+
   const getBullets = () => {
     return resumeBullets.map((bullet, index) => (
       <div
         onClick={() => handleCarousal(index)}
         className={
-          index === selectBulletIndex ? "bullet selected-bullet" : "bullet"
+          index === selectedBulletIndex ? "bullet selected-bullet" : "bullet"
         }
         key={index}
       >
@@ -220,10 +278,10 @@ export default function Resume(props) {
     ));
   };
 
-  const getResumeScreen = () => {
+  const getResumeScreens = () => {
     return (
       <div
-        style={carousalOffSetStyle.style}
+        style={carousalOffsetStyle.style}
         className="resume-details-carousal"
       >
         {resumeDetails.map((ResumeDetail) => ResumeDetail)}
@@ -231,10 +289,20 @@ export default function Resume(props) {
     );
   };
 
+  useEffect(() => {
+    return () => {
+      /* UNSUBSCRIBE THE SUBSCRIPTIONS */
+      fadeInSubscription.unsubscribe();
+    };
+  }, [fadeInSubscription]);
+
   return (
-    <div className="resume-container screen-container fade-in" id={props.id || ""}>
+    <div
+      className="resume-container screen-container fade-in"
+      id={props.id || ""}
+    >
       <div className="resume-content">
-        <ScreenHeading title={"Resume"} subHeading={"My Formal Bio Details"} />
+        <ScreenHeading title={"Resume"} subHeading={"My formal Bio Details"} />
         <div className="resume-card">
           <div className="resume-bullets">
             <div className="bullet-container">
@@ -242,9 +310,15 @@ export default function Resume(props) {
               <div className="bullets">{getBullets()}</div>
             </div>
           </div>
-          <div className="resume-bullet-details">{getResumeScreen()}</div>
+
+          <div className="resume-bullet-details">{getResumeScreens()}</div>
         </div>
+      </div>
+      <div className="footer-image">
+        <img src={shapebg} alt="Photo not responding" />
       </div>
     </div>
   );
-}
+};
+
+export default Resume;

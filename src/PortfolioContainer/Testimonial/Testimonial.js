@@ -2,15 +2,15 @@ import React from "react";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-import ScreenHeading from "../../utillities/ScreenHeading/ScreenHeading";
-import ScrollService from "../../utillities/ScrollService";
-import Animations from "../../utillities/Animations";
+import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
+import ScrollService from "../../utilities/ScrollService";
+import Animations from "../../utilities/Animations";
 import "./Testimonial.css";
 import lady from "../../../src/img/Testimonial/lady.png";
 import daisy from "../../../src/img/Testimonial/daisy.jpg";
 import ehiz from "../../../src/img/Testimonial/ehiz.jpg";
 import man from "../../../src/img/Testimonial/man.png";
-import shapebg from "../../../src/img/Testimonial/shapebg.png";
+import shapebg from "../../../src/img/Testimonial/shape-bg.png";
 
 export default function Testimonial(props) {
   let fadeInScreenHandler = (screen) => {

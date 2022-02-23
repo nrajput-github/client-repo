@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import ScreenHeading from "../../utillities/ScreenHeading/ScreenHeading";
-import ScrollService from "../../utillities/ScrollService";
-import Animations from "../../utillities/Animations";
+import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
+import ScrollService from "../../utilities/ScrollService";
+import Animations from "../../utilities/Animations";
 import "./AboutMe.css";
 
 export default function AboutMe(props) {
@@ -14,10 +14,10 @@ export default function AboutMe(props) {
 
   const SCREEN_CONSTANTS = {
     description:
-      "Full Stack web Developer with background knowledge Javascript, HTML/CSS, Redux along with",
+      "Full Stack web Developer with background knowledge Javascript, HTML/CSS, Redux along with over 4 years experience in customer service and management.",
     highlights: {
       bullets: [
-        "full stack wev debe",
+        "Full Stack Web Developer",
         "Interactive Front-end as per design",
         "React and React Native",
         "Redux for state management",
@@ -37,22 +37,29 @@ export default function AboutMe(props) {
   };
 
   return (
-    <div className="about-me-container screen-container fade-in" id={props.id || ""}>
+    <div
+      className="about-me-container screen-container fade-in"
+      id={props.id || ""}
+    >
       <div className="about-me-parent">
         <ScreenHeading title={"About Me"} subHeading={"Why Choose Me?"} />
         <div className="about-me-card">
           <div className="about-me-profile"></div>
           <div className="about-me-details">
             <span className="about-me-description">
-              {SCREEN_CONSTANTS.description}</span>
+              {SCREEN_CONSTANTS.description}
+            </span>
             <div className="about-me-highlights">
               <div className="highlight-heading">
                 <span>{SCREEN_CONSTANTS.highlights.heading}</span>
                 <div>{renderHighlight()}</div>
                 <div className="about-me-options">
-                  <button className="btn-primary-btn"
-                  onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
-                  >Hire Me</button>
+                  <button
+                    className="btn-primary-btn"
+                    onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
+                  >
+                    Hire Me
+                  </button>
                   <a href="navya.pdf" download="Navya Rajput.pdf">
                     <button className="btn-highlighted-btn">Get Resume</button>
                   </a>

@@ -9,7 +9,8 @@
 .profile-parent {
   display: flex;
   align-items: center;
-  color: aliceblue;
+  /* color: rgb(32, 211, 243); */
+  color: #28e1ee;
 }
 .profile-details-name {
   font-size: 24px;
@@ -25,10 +26,10 @@
   font-family: cursive;
 }
 .primary-text {
-  color: (--white);
+  color: (#ffe923);
 }
 .highlighted-text {
-  color: (--#ff5823);
+  color: (#23e5ff);
 }
 .profile-role-tagline {
   font-size: 19px;
@@ -40,8 +41,9 @@
 }
 .profile-options .btn-highlighted-btn:hover {
   margin: 0 0 0 28px;
-  background-color: cornsilk;
-  color: #111;
+  color: #23e5ff;
+  border: 2px solid #fae06e;
+  background-color: #353b3b;
 }
 .profile-picture {
   display: flex;
@@ -49,13 +51,13 @@
   justify-content: center;
   box-shadow: 0 1px 0px 0px var(--white);
   border-radius: 50%;
-  height: 380px;
-  width: 380px;
+  height: 250px;
+  width: 250px;
   margin: 0 0px 0 100px;
 }
 .profile-picture-background {
-  height: 92%;
-  width: 92%;
+  height: 240px;
+  width: 240px;
   background-image: url("../../../assets/Home/navya4.jpg");
   background-size: cover;
   border-radius: 50%;
@@ -66,16 +68,18 @@
   transform: scale(1.07);
   transition: 1s ease-out;
 }
-.colz .colz-icon i {
-  color: white;
-  padding: 8px;
+.colz .cols-icon i {
+  color: #ffd723;
+  padding: 18px;
   padding-left: 0;
+  /* size: 10px; */
 }
-.colz .colz-icon i:hover {
-  transform: scale(1.5);
+.colz .cols-icon i:hover {
+  transform: scale(1.6);
+  color: #ff2323;
 }
 
-/* @media screen and (max-width: 1110px) {
+@media screen and (max-width: 1110px) {
   .profile-picture {
     margin: 0 0px 0 80px;
   }
@@ -90,7 +94,7 @@
     padding: 11px 0;
     z-index: 700;
   }
-  }
+}
 
 @media screen and (max-width: 910px) {
   .profile-picture {
@@ -131,4 +135,4 @@
   .profile-detials {
     width: 90%;
   }
-} */
+}

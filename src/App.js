@@ -1,8 +1,10 @@
-import './App.css';
-// import Home from "./PortfolioContainer/Home/Footer/Home"
-import PortfolioContainer from './PortfolioContainer/PortfolioContainer';
-import { ToastContainer} from 'react-toastify';
+
+import React from 'react';
+import PortfolioContainer  from './PortfolioContainer/PortfolioContainer';
+import { ToastContainer } from 'react-toastify';
+// import { LoaderBar } from './utilities/commonUtils'
 import 'react-toastify/dist/ReactToastify.css';
+import './App.css';
 
 
 

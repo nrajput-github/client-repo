@@ -104,19 +104,13 @@
   cursor: pointer;
   transition: 0.2s;
   font-family: "Poppins SemiBold";
-  border-color: #ff5823;
+  color: black;
   font-size: 12px;
-  background-color: #ff5823;
+  /* background-color: #ff5823; */
 }
 .btn-highlighted-btn:active {
   transform: translateY(2px);
 }
-
-/* @media only screen and (max-width: 414px) {
-  .primary-btn {
-    font-size: 13px;
-  }
-} */
 
 .btn-primary-btn:hover {
   color: aliceblue;

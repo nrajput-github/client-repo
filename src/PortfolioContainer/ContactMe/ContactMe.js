@@ -5,9 +5,9 @@ import { toast } from "react-toastify";
 
 import imgBack from "../../../src/images/mailz.jpeg";
 import load1 from "../../../src/images/load2.gif";
-import ScreenHeading from "../../utillities/ScreenHeading/ScreenHeading";
-import ScrollService from "../../utillities/ScrollService";
-import Animations from "../../utillities/Animations";
+import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
+import ScrollService from "../../utilities/ScrollService";
+import Animations from "../../utilities/Animations";
 import "./ContactMe.css";
 
 export default function ContactMe(props) {

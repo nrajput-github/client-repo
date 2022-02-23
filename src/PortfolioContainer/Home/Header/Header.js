@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { TOTAL_SCREENS, GET_SCREEN_INDEX } from '../../../utillities/commonUtlis'
-import ScrollService from '../../../utillities/ScrollService'
+import { TOTAL_SCREENS, GET_SCREEN_INDEX } from '../../../utilities/commonUtlis'
+import ScrollService from '../../../utilities/ScrollService'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './Header.css'
@@ -15,7 +15,7 @@ export default function Header() {
       return;
     let screenIndex = GET_SCREEN_INDEX(currentScreen.screenInView)
     if (screenIndex < 0)
-      return
+      return;
   }
   let currentScreenSubscription = ScrollService.currentScreenBroadCaster.subscribe(updateCurrentScreen)
 
@@ -61,7 +61,7 @@ export default function Header() {
 
           </div>
           <div className='header-logo'>
-            <span>EHIZEEK~</span>
+            <span></span>
           </div>
           <div className={showHeaderOptions
             ? "header-options show-hamburger-options"

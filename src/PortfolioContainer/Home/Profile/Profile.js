@@ -3,7 +3,7 @@ import Typical from "react-typical";
 import '../../../index.css';
 import './Profile.css';
 import '../../../App.css'
-import ScrollService from "../../../utillities/ScrollService";
+import ScrollService from "../../../utilities/ScrollService";
 
 export default function Profile() {
   return (
@@ -11,7 +11,7 @@ export default function Profile() {
       <div className="profile-parent">
         <div className="profile-details">
           <div className="colz">
-            <div className="colz-icon">
+            <div className="cols-icon">
             <a href="https://www.facebook.com/navya.chauhan20">
               <i className="fa fa-facebook-square"></i>
             </a>
@@ -41,15 +41,15 @@ export default function Profile() {
                   loop={Infinity}
                   steps={[
                     "Full Stack Web developer 👩🏻‍💻",
-                    1000,
+                    3000,
                     "Ethusiastic Dev 🔴",
-                    1000,
+                    3000,
                     "Javascript Dev 💻",
-                    1000,
+                    3000,
                     "React/Native ⚛️📱",
-                    1000,
+                    3000,
                     "HTML/CSS Dev ",
-                    1000,
+                    3000,
                   ]}
                 />
               </h1>

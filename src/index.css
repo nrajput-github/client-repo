@@ -65,8 +65,8 @@
 }
 
 ::-webkit-scrollbar {
-  width: 6px !important;
-  height: 6px !important;
+  width: 9px !important;
+  height: 9px !important;
 }
 
 .body ::-webkit-scrollbar-thumb {
@@ -88,11 +88,12 @@
   cursor: pointer;
   transition: 0.2s;
   font-family: "Poppins SemiBold";
-  color: black;
+  color: rgb(39, 39, 38);
   /* border-color: white; */
   font-size: 12px;
   /* background-color: #1f2235; */
 }
+/* hire me button*/
 
 .btn-primary-btn:active {
   transform: translateY(2px);
@@ -104,10 +105,11 @@
   cursor: pointer;
   transition: 0.2s;
   font-family: "Poppins SemiBold";
-  color: black;
+  color: rgb(43, 42, 40);
   font-size: 12px;
   /* background-color: #ff5823; */
 }
+/* btn-highlighted-btn resumebutton */
 .btn-highlighted-btn:active {
   transform: translateY(2px);
 }

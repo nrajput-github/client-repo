@@ -314,7 +314,7 @@ const Resume = (props) => {
           <div className="resume-bullet-details">{getResumeScreens()}</div>
         </div>
       </div>
-      <div className="footer-image">
+      <div className="resume-footer-image">
         <img src={shapebg} alt="Photo not responding" />
       </div>
     </div>

@@ -1,8 +1,8 @@
 import React from "react";
 import Typical from "react-typical";
-import '../../../index.css';
-import './Profile.css';
-import '../../../App.css'
+import "../../../index.css";
+import "./Profile.css";
+import "../../../App.css";
 import ScrollService from "../../../utilities/ScrollService";
 
 export default function Profile() {
@@ -12,21 +12,40 @@ export default function Profile() {
         <div className="profile-details">
           <div className="colz">
             <div className="cols-icon">
-            <a href="https://www.facebook.com/navya.chauhan20">
-              <i className="fa fa-facebook-square"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/navya-rajput-9627aa165">
-              <i className="fa fa-linkedin-square"></i>
-            </a>
-            <a href="https://www.instagram.com/navyachauhan20/?hl=en">
-              <i className="fa fa-instagram"></i>
-            </a>
-            <a href="https://twitter.com/NavyaRajput20">
-              <i className="fa fa-twitter-square"></i>
+              <a
+                href="https://www.facebook.com/navya.chauhan20"
+                rel="opener noreferrer"
+                target="_blank"
+              >
+                <i className="fa fa-facebook-square"></i>
               </a>
+              <a
+                href="https://www.linkedin.com/in/navya-rajput-9627aa165"
+                rel="opener noreferrer"
+                target="_blank"
+              >
+                <i className="fa fa-linkedin-square"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/navyachauhan20/?hl=en"
+                rel="opener noreferrer"
+                target="_blank"
+              >
+                <i className="fa fa-instagram"></i>
+              </a>
+              <a
+                href="https://twitter.com/NavyaRajput20"
+                rel="opener noreferrer"
+                target="_blank"
+              >
+                <i className="fa fas fa-twitter fa-lg"></i>
+              </a>
+              {/* <a href="https://twitter.com/NavyaRajput20">
+              <i className="fa fa-twitter-square"></i>
+              </a> */}
             </div>
           </div>
-          
+
           <div className="profile-details-name">
             <span className="primary-text">
               {" "}
@@ -60,8 +79,12 @@ export default function Profile() {
             </span>
           </div>
           <div className="profile-options">
-            <button className="btn-primary-btn"
-            onClick={() => ScrollService.scrollHandler.scrollToHireMe()}>Hire Me</button>
+            <button
+              className="btn-primary-btn"
+              onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
+            >
+              Hire Me
+            </button>
             <a href="navya.pdf" download="Navya Rajput.pdf">
               <button className="btn-highlighted-btn">Get Resume</button>
             </a>

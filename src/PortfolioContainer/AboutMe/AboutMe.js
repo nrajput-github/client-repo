@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
+// import { FaArrowCircleDown } from "react-icons/fa";
 import Animations from "../../utilities/Animations";
 import "./AboutMe.css";
 
@@ -14,14 +15,16 @@ export default function AboutMe(props) {
 
   const SCREEN_CONSTANTS = {
     description:
-      "Full Stack web Developer with background knowledge Javascript, HTML/CSS, Redux along with over 4 years experience in customer service and management.",
+      "A result-driven certified Full-Stack Web Developer with a management background. Graduated from Lighthouse Labs and completed a Full-Stack Web Development diploma. Having experience in customer service and management, I found myself passionate and focused on web development and eager to collaborate with my coding and problems solving skills.",
     highlights: {
       bullets: [
         "Full Stack Web Developer",
         "Interactive Front-end as per design",
-        "React and React Native",
+        "Proficient in programming languages, modern front-end, back-end plus testing frameworks",
+        "Core is React.Js",
         "Redux for state management",
         "Building Rest API",
+        "Experienced in Git Version control",
       ],
       heading: "Here few highlights",
     },
@@ -60,8 +63,8 @@ export default function AboutMe(props) {
                   >
                     Hire Me
                   </button>
-                  <a href="navya.pdf" download="Navya Rajput.pdf">
-                    <button className="btn-highlighted-btn">Get Resume</button>
+                  <a href="navya.pdf" download="Navya Rajput.pdf/">
+                    <button className="btn-highlighted-btn">To Know More Info</button>
                   </a>
                 </div>
               </div>

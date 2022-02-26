@@ -7,4 +7,4 @@ export default class Animations {
     screen.style.opacity = "5";
     screen.style.transform = "translateY(1px)"
   };
-}
+} 

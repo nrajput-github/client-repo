@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   /* color: rgb(32, 211, 243); */
-  color: #28e1ee;
+  /* color: #f5cb10; */
 }
 .profile-details-name {
   font-size: 24px;
@@ -26,7 +26,7 @@
   font-family: cursive;
 }
 .primary-text {
-  color: #23e5ff;
+  color: #f5cb10;
 }
 .highlighted-text {
   color: #23e5ff;
@@ -43,6 +43,7 @@
   border: 2px solid #23e5ff;
   background-color: #353b3b;
 }
+
 .profile-options .btn-highlighted-btn:hover {
   margin: 0 0 0 28px;
   color: #23e5ff;

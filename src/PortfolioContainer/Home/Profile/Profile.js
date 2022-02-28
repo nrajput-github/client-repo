@@ -59,9 +59,10 @@ export default function Profile() {
                 <Typical
                   loop={Infinity}
                   steps={[
-                    "Full Stack Web developer 👩🏻‍💻",
+                    "Full-Stack Developer 👩🏻‍💻 ",
+                    ,
                     3000,
-                    "Ethusiastic Dev 🔴",
+                    "Ethusiastic Dev 🟢",
                     3000,
                     "Javascript Dev 💻",
                     3000,
@@ -73,7 +74,7 @@ export default function Profile() {
                 />
               </h1>
               <span className="profile-role-tagline">
-                Knack for building application with front and back end
+                Passion for building application with front and back end
                 operations.
               </span>
             </span>

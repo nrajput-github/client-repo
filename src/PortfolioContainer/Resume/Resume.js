@@ -3,7 +3,7 @@ import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
 import "./Resume.css";
-import shapebg from "../../../src/img/Testimonial/shape-bg.png";
+// import shapebg from "../../../src/img/Testimonial/shape-bg.png";
 
 const Resume = (props) => {
   /* STATES */
@@ -64,33 +64,35 @@ const Resume = (props) => {
 
   const projectsDetails = [
     {
-      title: "Personal Portfolio Website",
+      title: "Interview Schedular",
+      gitlink: "https://github.com/nrajput-github/scheduler",
       duration: { fromDate: "2021", toDate: "2021" },
-      // description:
-      //   "A Personal Portfolio website to show my all detials experience and skills",
-      // subHeading: "Tech Stack: React JS, Bootsrap.",
+      description: "Tech Stack: React JS, Bootsrap.",
     },
+    // subHeading: "Tech Stack: React JS, Bootsrap.",
+
     {
       title: "YelpLike ",
+      gitlink: "https://github.com/christinetw/final_project",
       duration: { fromDate: "2021", toDate: "2021" },
-      // description:
-      //   "Created a full-stack single-page application where users can check reviews and comments of a particular restaurant and can give and manage their own reviews after sign-in app.",
+      description:
+        "Tech Stack: Ruby, Rails, Javascript, React, HTML/CSS, Bootstrap, Google Map API.",
       // subHeading:
       //   "Tech Stack: Ruby, Rails, Javascript, React, HTML/CSS, Bootstrap, Google Map API.",
     },
     {
       title: "Tweeter ",
+      gitlink: "https://github.com/nrajput-github/tweeter",
       duration: { fromDate: "2021", toDate: "2021" },
-      // description:
-      //   "Implemented a client-side single-page App, which communicates with a server via AJAX, Where users can write, post by their name, delete their own tweets, and displays tweets in reverse- chronological order.",
+      description: "Tech Stack: HTML, CSS, JS, jQuery and AJAX.",
       // subHeading: "Tech Stack: HTML, CSS, JS, jQuery and AJAX.",
     },
     {
       title: "QuizApp ",
+      gitlink: "https://github.com/ghelle2h/quiz_app",
       duration: { fromDate: "2021", toDate: "2021" },
-      // description:
-      //   "An application that allows users to attempt quizzes.Users can see a list of public quizzes on the home page and can see the results of their recent attempts.",
-      // subHeading:
+      description:
+        "Tech Stack: EJS, Javascript, Ajax, Express, Jquery, HTML/CSS, Saas, BootStrap, and PostgreSQL.",
       //   "Tech Stack: EJS, Javascript, Ajax, Express, Jquery, HTML/CSS, Saas, BootStrap, and PostgreSQL.",
     },
   ];
@@ -219,7 +221,10 @@ const Resume = (props) => {
       {projectsDetails.map((projectsDetails, index) => (
         <ResumeHeading
           key={index}
-          heading={projectsDetails.title}
+          // heading={projectsDetails.title}
+          heading={
+            <a href={projectsDetails.gitlink}>{projectsDetails.title} </a>
+          }
           subHeading={projectsDetails.subHeading}
           description={projectsDetails.description}
           fromDate={projectsDetails.duration.fromDate}
@@ -234,7 +239,7 @@ const Resume = (props) => {
       key="interests"
     >
       <ResumeHeading
-        heading="Teaching"
+        heading="Net Surfing"
         description="Apart from being a tech enthusiast and a code writer, i also love to teach people what i know simply because i believe in sharing."
       />
       <ResumeHeading
@@ -314,9 +319,9 @@ const Resume = (props) => {
           <div className="resume-bullet-details">{getResumeScreens()}</div>
         </div>
       </div>
-      <div className="resume-footer-image">
+      {/* <div className="resume-footer-image">
         <img src={shapebg} alt="Photo not responding" />
-      </div>
+      </div> */}
     </div>
   );
 };

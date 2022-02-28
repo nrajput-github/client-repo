@@ -4,6 +4,7 @@
   height: 149px;
   color: var(--white);
 }
+/* frozen header container */
 .header-parent {
   display: flex;
   align-items: center;
@@ -26,6 +27,10 @@
   cursor: pointer;
   font-weight: 600;
 }
+.header-option:hover {
+  border-radius: 5px;
+  background-color: #e422eb;
+}
 .header-hamburger {
   display: none;
   color: var(--white);
@@ -35,7 +40,7 @@
   color: var(--white);
 }
 .selected-header-option {
-  color: var(--dark-orange);
+  color: rgb(250, 206, 61);
 }
 
 /*IPAD PRO RESPONSIVENESS*/

@@ -1,44 +1,36 @@
 .resume-container {
-  display: flex;
+  /* display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   min-height: fit-content;
   margin: 140px 0 0 0;
-  padding: 50px 0 0 0;
+  padding: 50px 0 0 0; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 60px 0;
+  padding-bottom: 25px;
+  /* padding-bottom: 20px; */
   /* background-image: url("../../assets/Home/bg.jpg"); */
 }
-/* .footer-image {
-  width: 100%;
-  height: 100%;
-  max-width: 1920px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  margin-top: -110px;
-} */
-.resume-footer-image img {
-  max-width: 100%;
-  height: 100px;
-  justify-content: center;
-  margin-top: -110px;
-}
+
 .resume-card {
   display: flex;
   height: 400px;
-  width: 120%;
-  margin: 50px 0;
-  margin-right: auto;
-  margin-left: auto;
-
-  /* margin-left: 200px; */
-  /* background-color: #e7e8fa; */
+  width: 1100px;
+  padding-right: 100px;
+  box-shadow: 0 0px 30px -2px #07b9e6;
+  border-radius: 25px;
+  background-color: rgb(123, 126, 126);
 }
 
 .resume-bullets {
-  box-shadow: 15px 0 9px -15px #1f2235;
+  box-shadow: 15px 0 9px -15px #f9feff;
   height: 100%;
   width: 300px;
+  border-radius: 25px;
 }
 
 .resume-bullet-details {
@@ -50,7 +42,6 @@
 .experience-container {
   margin: 0px;
   padding: 0;
-  /* height: 700px; */
   overflow-x: hidden;
 }
 
@@ -71,8 +62,6 @@
   padding-bottom: 100px;
 }
 .education-container {
-  /* padding-top: 196px;
-  padding-bottom: 200px; */
   padding-top: 20px;
   padding-bottom: 100px;
 }
@@ -82,6 +71,9 @@
   height: 100%;
   width: 100%;
   position: relative;
+  border-radius: 25px;
+  background-color: rgb(123, 126, 126);
+  box-shadow: 0 0px 30px -2px #f9feff;
 }
 
 .bullets {
@@ -120,6 +112,7 @@
   z-index: 1;
   background-color: #1f2235;
   position: absolute;
+  border-radius: 12px;
 }
 
 .selected-bullet {
@@ -138,15 +131,12 @@
   flex-direction: column;
   justify-content: space-evenly;
   margin-top: 0%;
-  /* height:auto; */
   width: 100%;
   padding-top: 0px;
   padding-bottom: 220px;
-
 }
 .projects-container {
-  padding-bottom: 290px;
-  /* padding-top: 82px; */
+  padding-bottom: 272px;
   padding-top: 0px;
 }
 .interests-container {
@@ -167,7 +157,7 @@
 }
 
 .resume-main-heading {
-  color: #0bbfd3;
+  color: #0adcf3;
   font-size: 16px;
   font-family: "Poppins SemiBold";
 }
@@ -190,20 +180,20 @@
   font-size: 14px;
   font-family: "Poppins SemiBold";
   color: var(--black);
-
-  /* margin: 8px 0 0 0; */
 }
 
 .resume-heading-description {
   font-size: 12px;
   text-align: justify;
+  padding-right: 15px;
+  padding-bottom: 17px;
+  padding-top: 0%;
 }
 
 .heading-date {
-  background-color: #c2f6f8;
+  background-color: #27e4eb;
   padding: 4px 10px;
   padding-bottom: 4px;
-  /* padding-top: 10px; */
   font-size: 14px;
   border-radius: 14px;
   color: #080808;

@@ -5,6 +5,7 @@
   justify-content: center;
   height: 10%;
   min-height: fit-content;
+  /* box-shadow: 0 0px 20px -2px #07b9e6; */
 }
 .profile-parent {
   display: flex;
@@ -26,7 +27,7 @@
   font-family: cursive;
 }
 .primary-text {
-  color: #f5cb10;
+  color: #23e5ff;
 }
 .highlighted-text {
   color: #23e5ff;
@@ -68,13 +69,14 @@
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center;
+  box-shadow: 0 0px 20px -2px #07b9e6;
 }
 .profile-picture-background:hover {
   transform: scale(1.07);
   transition: 1s ease-out;
 }
 .colz .cols-icon i {
-  color: #ff2a23;
+  color: #23e5ff;
   padding: 18px;
   padding-left: 0;
   /* size: 10px; */

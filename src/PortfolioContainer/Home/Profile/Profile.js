@@ -13,11 +13,11 @@ export default function Profile() {
           <div className="colz">
             <div className="cols-icon">
               <a
-                href="https://www.facebook.com/navya.chauhan20"
+                href="https://github.com/nrajput-github"
                 rel="opener noreferrer"
                 target="_blank"
               >
-                <i className="fa fa-facebook-square"></i>
+                <i className="fa fa-github-square"></i>
               </a>
               <a
                 href="https://www.linkedin.com/in/navya-rajput-9627aa165"

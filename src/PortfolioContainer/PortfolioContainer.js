@@ -16,7 +16,7 @@ export default function PortfolioContainer() {
     );
   };
   return (
-    <div className="portfolio-container" style={{ backgroundColor: "white" }}>
+    <div className="portfolio-container" style={{ backgroundColor: "black" }}>
       {mapAllScreens()}
     </div>
   );

@@ -223,7 +223,14 @@ const Resume = (props) => {
           key={index}
           // heading={projectsDetails.title}
           heading={
-            <a href={projectsDetails.gitlink}>{projectsDetails.title} </a>
+            <a
+              className="git-link"
+              href={projectsDetails.gitlink}
+              rel="opener noreferrer"
+              target="_blank"
+            >
+              {projectsDetails.title}{" "}
+            </a>
           }
           subHeading={projectsDetails.subHeading}
           description={projectsDetails.description}
@@ -239,17 +246,14 @@ const Resume = (props) => {
       key="interests"
     >
       <ResumeHeading
-        heading="Net Surfing"
-        description="Apart from being a tech enthusiast and a code writer, i also love to teach people what i know simply because i believe in sharing."
+        heading="Art and Crafting"
+        description="In my spare time, I love to do art and crafting and some DIYs."
       />
       <ResumeHeading
-        heading="Music"
-        description="Listening to soothing music is something i can never compromise with, skimming through Spotify's pop songs charts is at times the best stress reliever that i can get my hands on."
+        heading="Dancing & Music"
+        description="I love dancing and listening soothing music. It keeps me relax and stree free."
       />
-      <ResumeHeading
-        heading="Competitive Gaming"
-        description="I like to challenge my reflexes a lot while competing in football games, pushing the rank and having interactive gaming sessions excites me the most."
-      />
+      <ResumeHeading heading="Photography" description="I like photography." />
     </div>,
   ];
 
@@ -307,7 +311,7 @@ const Resume = (props) => {
       id={props.id || ""}
     >
       <div className="resume-content">
-        <ScreenHeading title={"Resume"} subHeading={"My formal Bio Details"} />
+        <ScreenHeading title={"Resume"} subHeading={"My brief Summary"} />
         <div className="resume-card">
           <div className="resume-bullets">
             <div className="bullet-container">

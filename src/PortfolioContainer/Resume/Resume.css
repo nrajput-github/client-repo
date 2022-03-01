@@ -23,7 +23,7 @@
   padding-right: 100px;
   box-shadow: 0 0px 30px -2px #07b9e6;
   border-radius: 25px;
-  background-color: rgb(123, 126, 126);
+  background-color: #272929;
 }
 
 .resume-bullets {
@@ -158,12 +158,13 @@
 
 .resume-main-heading {
   color: #0adcf3;
-  font-size: 16px;
+  font-size: 18px;
   font-family: "Poppins SemiBold";
 }
 
 .experience-description {
   max-width: 100%;
+  color: #aeb109;
 }
 
 .heading-bullet {
@@ -177,28 +178,32 @@
 }
 
 .resume-sub-heading {
-  font-size: 14px;
+  font-size: 16px;
   font-family: "Poppins SemiBold";
-  color: var(--black);
+  color: #aeb109;
 }
 
 .resume-heading-description {
-  font-size: 12px;
+  font-size: 13px;
   text-align: justify;
   padding-right: 15px;
   padding-bottom: 17px;
   padding-top: 0%;
+  color: #aeb109;
 }
 
 .heading-date {
   background-color: #27e4eb;
-  padding: 4px 10px;
+  padding: 2px 10px;
   padding-bottom: 4px;
   font-size: 14px;
   border-radius: 14px;
   color: #080808;
   justify-content: space-between;
   display: flex;
+}
+.git-link {
+  color: #aeb109;
 }
 
 .skill-parent {

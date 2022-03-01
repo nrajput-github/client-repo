@@ -6,11 +6,6 @@ import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
 import "./Testimonial.css";
-// import lady from "../../../src/img/Testimonial/lady.png";
-// import daisy from "../../../src/img/Testimonial/daisy.jpg";
-// import ehiz from "../../../src/img/Testimonial/ehiz.jpg";
-// import man from "../../../src/img/Testimonial/man.png";
-// import shapebg from "../../../src/img/Testimonial/shape-bg.png";
 
 export default function Testimonial(props) {
   let fadeInScreenHandler = (screen) => {
@@ -61,9 +56,7 @@ export default function Testimonial(props) {
                   <div className="testi-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      {/* I patronized Ehizeex and when He delivered, I honestly
-                      fell in love with the project He is a very honest guy and
-                      he delivers ontime. */}
+                      {/* Testimonial feedback description */}
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -85,9 +78,7 @@ export default function Testimonial(props) {
                     </ul>
                   </div>
                   <div className="client-info">
-                    {/* <img src={lady} alt="no internet connection"></img>
-                    <h5>Arin kiosk</h5>
-                    <p>CEO InasGlobal</p> */}
+                    {/* Testimonial feedback description */}
                   </div>
                 </div>
               </div>
@@ -96,9 +87,7 @@ export default function Testimonial(props) {
                   <div className="testi-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      {/* I patronized Ehizeex and when He delivered, I honestly
-                      fell in love with the project He is a very honest guy and
-                      he delivers ontime. */}
+                      {}
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -119,11 +108,7 @@ export default function Testimonial(props) {
                       </li>
                     </ul>
                   </div>
-                  <div className="client-info">
-                    {/* <img src={daisy} alt="no internet connection"></img>
-                    <h5>Daisy Dominic</h5>
-                    <p>CEO InasGlobal</p> */}
-                  </div>
+                  <div className="client-info">{}</div>
                 </div>
               </div>
               <div className="col-lg-12">
@@ -131,9 +116,7 @@ export default function Testimonial(props) {
                   <div className="testi-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      {/* I patronized Ehizeex and when He delivered, I honestly
-                      fell in love with the project He is a very honest guy and
-                      he delivers ontime. */}
+                      {}
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -154,11 +137,7 @@ export default function Testimonial(props) {
                       </li>
                     </ul>
                   </div>
-                  <div className="client-info">
-                    {/* <img src={ehiz} alt="no internet connection"></img>
-                    <h5>Ehiz Zelo</h5>
-                    <p>CEO InasGlobal</p> */}
-                  </div>
+                  <div className="client-info">{}</div>
                 </div>
               </div>
               <div className="col-lg-12">
@@ -166,9 +145,7 @@ export default function Testimonial(props) {
                   <div className="testi-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      {/* I patronized Ehizeex and when He delivered, I honestly
-                      fell in love with the project He is a very honest guy and
-                      he delivers ontime. */}
+                      {}
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -189,20 +166,14 @@ export default function Testimonial(props) {
                       </li>
                     </ul>
                   </div>
-                  <div className="client-info">
-                    {/* <img src={man} alt="no internet connection"></img>
-                    <h5>Mike Dominic</h5>
-                    <p>CEO InasGlobal</p> */}
-                  </div>
+                  <div className="client-info">{}</div>
                 </div>
               </div>
             </OwlCarousel>
           </div>
         </div>
       </section>
-      {/* <div className="footer-image">
-        <img src={shapebg} alt="Photo not responding" />
-      </div> */}
+      {}
     </div>
   );
 }

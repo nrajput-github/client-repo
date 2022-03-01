@@ -10,11 +10,11 @@
   letter-spacing: 3px;
   margin: 8px 0 10px 0;
   font-size: 12px;
-  color: black;
+  color: rgb(250, 238, 238);
 }
 .screen-heading {
   font-size: 32px;
-  color: black;
+  color: rgb(250, 238, 238);
   font-family: "Poppins Bold";
 }
 .heading-seperator {

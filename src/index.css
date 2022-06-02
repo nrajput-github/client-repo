@@ -78,7 +78,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: hsla(0, 0%, 100%, 0.1);
+  background: hsla(0, 88%, 44%, 0.1);
 }
 
 .btn-primary-btn {
@@ -120,19 +120,30 @@
   color: aliceblue;
   border: 2px solid #f7e709;
   background-color: #000000;
+  transition: all 0.3s linear;
+  box-shadow: 2px 5px 3px 0px rgb(255, 255, 255);
 }
 
 .btn-highlighted-btn:hover {
   color: aliceblue;
   border: 2px solid #f7e709;
   background-color: #000000;
+  transition: all 0.3s linear;
+  box-shadow: 2px 5px 3px 0px rgb(255, 255, 255);
 }
 @media only screen and (max-width: 568px) {
   .btn-highlighted-btn {
     z-index: -900;
   }
+  .btn-primary-btn {
+    z-index: -900;
+  }
 }
-
+/* @media only screen and (max-width: 568px) {
+  .btn-primary-btn {
+    z-index: -900;
+  }
+} */
 .red-border {
   border: 1px solid var(--error-message) !important;
 }

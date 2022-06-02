@@ -3,8 +3,9 @@
   align-items: center;
   text-align: center;
   justify-content: center;
-  height: 10%;
+  height: 8px;
   min-height: fit-content;
+  padding-bottom: 60px;
   /* box-shadow: 0 0px 20px -2px #07b9e6; */
 }
 .profile-parent {
@@ -47,7 +48,7 @@
 
 .profile-options .btn-highlighted-btn:hover {
   margin: 0 0 0 28px;
-  color: #23e5ff;
+  color: #f7e709;
   border: 2px solid #f7e709;
   background-color: #000000;
 }
@@ -62,11 +63,11 @@
   margin: 0 0px 0 100px;
 }
 .profile-picture-background {
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   background-image: url("../../../assets/Home/navya2.jpg");
   background-size: cover;
-  border-radius: 50%;
+  border-radius: 5%;
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: 0 0px 20px -2px #07b9e6;
@@ -96,7 +97,12 @@
   .profile-details-role .primary-text {
     font-size: 12px;
   }
-  .profile-options .btn {
+  .profile-options .btn-highlighted-btn {
+    width: 120px;
+    padding: 11px 0;
+    z-index: 700;
+  }
+  .profile-options .btn-primary-btn {
     width: 120px;
     padding: 11px 0;
     z-index: 700;
@@ -127,7 +133,10 @@
     .profile-options .btn-highlighted-btn {
       margin: 0 !important;
     }
-    .profile-options,
+    .profile-options .btn-primary-btn {
+      margin: 0 !important;
+    }
+
     .profile-details-role {
       text-align: center;
     }

@@ -10,8 +10,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 30px 0 60px 0;
-  padding-bottom: 25px;
+  margin: 30px 0 px 0;
+  padding-bottom: 5px;
+  padding-top: 20px;
   /* padding-bottom: 20px; */
   /* background-image: url("../../assets/Home/bg.jpg"); */
 }
@@ -23,7 +24,8 @@
   padding-right: 100px;
   box-shadow: 0 0px 30px -2px #07b9e6;
   border-radius: 25px;
-  background-color: #272929;
+  background-color: #969a9b;
+  border: 3px solid rgb(9, 10, 9);
 }
 
 .resume-bullets {

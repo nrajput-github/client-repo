@@ -1,44 +1,46 @@
-import React, { useState } from "react";
-import {
-  TOTAL_SCREENS,
-  GET_SCREEN_INDEX,
-} from "../../../utilities/commonUtlis";
+import React, { useState, useEffect } from "react";
+import { TOTAL_SCREENS, GET_SCREEN_INDEX } from "../../../utilities/commonUtils";
 import ScrollService from "../../../utilities/ScrollService";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Header.css";
-import index from "react-typical";
 
-export default function Header() {
+const Header = () => {
+  /* STATES TO BE USED */
   const [selectedScreen, setSelectedScreen] = useState(0);
   const [showHeaderOptions, setShowHeaderOptions] = useState(false);
 
   const updateCurrentScreen = (currentScreen) => {
     if (!currentScreen || !currentScreen.screenInView) return;
+
     let screenIndex = GET_SCREEN_INDEX(currentScreen.screenInView);
     if (screenIndex < 0) return;
+
+    setSelectedScreen(screenIndex);
   };
+
+  /* SUBSCRIPTIONS */
   let currentScreenSubscription =
-    ScrollService.currentScreenBroadCaster.subscribe(updateCurrentScreen);
+    ScrollService.currentScreenBroadcaster.subscribe(updateCurrentScreen);
 
   const getHeaderOptions = () => {
-    //console.log("IN getHeaderOptions");
-    return TOTAL_SCREENS.map((screen, i) => (
+    return TOTAL_SCREENS.map((Screen, i) => (
       <div
-        key={screen.screen_name}
-        className={getHeaderOptionsClass(i)}
-        onClick={() => switchScreen(i, screen)}
+        key={Screen.screen_name}
+        className={getHeaderOptionsClasses(i)}
+        onClick={() => switchScreen(i, Screen)}
       >
-        <span>{screen.screen_name}</span>
+        <span>{Screen.screen_name}</span>
       </div>
     ));
   };
 
-  const getHeaderOptionsClass = (index) => {
-    //  console.log(`IN ${index}`);
-    let classes = "header-option";
-    if (index < TOTAL_SCREENS.length - 1) classes += " header-option-seperator";
-    if (selectedScreen === index) classes += " selected-header-option";
+  const getHeaderOptionsClasses = (index) => {
+    let classes = "header-option ";
+    if (index < TOTAL_SCREENS.length - 1) classes += "header-option-seperator ";
+
+    if (selectedScreen === index) classes += "selected-header-option ";
+
     return classes;
   };
 
@@ -51,33 +53,40 @@ export default function Header() {
     setShowHeaderOptions(false);
   };
 
+  useEffect(() => {
+    return () => {
+      /* UNSUBSCRIBE THE SUBSCRIPTIONS */
+      currentScreenSubscription.unsubscribe();
+    };
+  }, [currentScreenSubscription]);
+
   return (
-    <div>
-      <div
-        className="header-container"
-        onClick={() => setShowHeaderOptions(!showHeaderOptions)}
-      >
-        <div className="header-parent">
-          <div
-            className="header-hamburger"
-            onClick={() => setShowHeaderOptions(!showHeaderOptions)}
-          >
-            <FontAwesomeIcon className="header-hamburger-bars" icon={faBars} />
-          </div>
-          <div className="header-logo">
-            <span></span>
-          </div>
-          <div
-            className={
-              showHeaderOptions
-                ? "header-options show-hamburger-options"
-                : "header-options"
-            }
-          >
-            {getHeaderOptions()}
-          </div>
+    <div
+      className="header-container"
+      onClick={() => setShowHeaderOptions(!showHeaderOptions)}
+    >
+      <div className="header-parent">
+        <div
+          className="header-hamburger"
+          onClick={() => setShowHeaderOptions(!showHeaderOptions)}
+        >
+          <FontAwesomeIcon className="header-hamburger-bars" icon={faBars} />
+        </div>
+        <div className="header-logo">
+          {/* <span>EHIZEEX.</span> */}
+        </div>
+        <div
+          className={
+            showHeaderOptions
+              ? "header-options show-hamburger-options"
+              : "header-options"
+          }
+        >
+          {getHeaderOptions()}
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default Header;

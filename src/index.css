@@ -51,7 +51,7 @@
   outline: none;
 }
 
-.body {
+body {
   margin: 0;
   overflow-y: overlay;
   font-family: "Poppins Regular";
@@ -59,7 +59,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.code {
+code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
@@ -69,79 +69,57 @@
   height: 9px !important;
 }
 
-.body ::-webkit-scrollbar-thumb {
-  background-color: rgb(66, 250, 250);
+body ::-webkit-scrollbar-thumb {
+  background-color: purple;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(66, 250, 250);
+  background-color: purple;
 }
 
 ::-webkit-scrollbar-track {
   background: hsla(0, 88%, 44%, 0.1);
 }
 
-.btn-primary-btn {
-  border-radius: 50px;
+.btn {
+  border-radius: 2px;
   padding: 14px 0;
+  margin-top: 20px;
   width: 160px;
   cursor: pointer;
   transition: 0.2s;
   font-family: "Poppins SemiBold";
-  font-size: 12px;
-  color: #23e5ff;
-  border: 2px solid #23e5ff;
-  background-color: #353b3b;
-}
-/* hire me button*/
-
-.btn-primary-btn:active {
-  transform: translateY(2px);
-}
-.btn-highlighted-btn {
-  border-radius: 50px;
-  padding: 14px 0;
-  width: 160px;
-  cursor: pointer;
-  transition: 0.2s;
-  font-family: "Poppins SemiBold";
-  font-size: 12px;
-  color: #23e5ff;
-  border: 2px solid #23e5ff;
-  background-color: #353b3b;
-  /* background-color: #ff5823; */
-}
-/* btn-highlighted-btn resumebutton */
-.btn-highlighted-btn:active {
-  transform: translateY(2px);
 }
 
-.btn-primary-btn:hover {
+.btn:active {
+  transform: translateY(2px);
+}
+.primary-btn {
+  color: purple;
+  border: 2px solid purple;
+  font-size: 12px;
+  background-color: transparent;
+}
+/* @media only screen and (max-width: 414px) {
+  .primary-btn {
+    font-size:13px;
+  }
+} */
+.primary-btn:hover {
   color: aliceblue;
   border: 2px solid #f7e709;
   background-color: #000000;
   transition: all 0.3s linear;
   box-shadow: 2px 5px 3px 0px rgb(255, 255, 255);
 }
-
-.btn-highlighted-btn:hover {
-  color: aliceblue;
-  border: 2px solid #f7e709;
-  background-color: #000000;
-  transition: all 0.3s linear;
-  box-shadow: 2px 5px 3px 0px rgb(255, 255, 255);
-}
-@media only screen and (max-width: 568px) {
-  .btn-highlighted-btn {
-    z-index: -900;
-  }
-  .btn-primary-btn {
-    z-index: -900;
-  }
-}
-/* @media only screen and (max-width: 568px) {
-  .btn-primary-btn {
-    z-index: -900;
+/* .highlighted-btn {
+  color: green;
+  font-size: 12px;
+  background-color: #ff5823;
+} */
+/* @media only screen and (max-width: 414px) {
+  .highlighted-btn {
+    font-size:13px;
   }
 } */
 .red-border {

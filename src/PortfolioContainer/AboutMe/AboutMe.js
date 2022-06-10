@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
-// import { FaArrowCircleDown } from "react-icons/fa";
+import { FaArrowCircleDown } from "react-icons/fa";
 import Animations from "../../utilities/Animations";
 import "./AboutMe.css";
 
-export default function AboutMe(props) {
+const AboutMe = (props) => {
   let fadeInScreenHandler = (screen) => {
     if (screen.fadeInScreen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
@@ -30,14 +30,20 @@ export default function AboutMe(props) {
     },
   };
 
-  const renderHighlight = () => {
+  const renderHighlights = () => {
     return SCREEN_CONSTANTS.highlights.bullets.map((value, i) => (
       <div className="highlight" key={i}>
         <div className="highlight-blob"></div>
-        <span> {value}</span>
+        <span>{value}</span>
       </div>
     ));
   };
+  useEffect(() => {
+    return () => {
+      /* UNSUBSCRIBE THE SUBSCRIPTIONS */
+      fadeInSubscription.unsubscribe();
+    };
+  }, [fadeInSubscription]);
 
   return (
     <div
@@ -55,23 +61,25 @@ export default function AboutMe(props) {
             <div className="about-me-highlights">
               <div className="highlight-heading">
                 <span>{SCREEN_CONSTANTS.highlights.heading}</span>
-                <div>{renderHighlight()}</div>
-                <div className="about-me-options">
-                  <button
-                    className="btn-primary-btn"
-                    onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
-                  >
-                    Hire Me
-                  </button>
-                  <a href="navya.pdf" target="_blank" view="Navya Rajput.pdf">
-                    <button className="btn-highlighted-btn">View Resume</button>
-                  </a>
-                </div>
               </div>
+              {renderHighlights()}
+            </div>
+            <div className="about-me-options">
+              <button
+                className="btn-primary-btn"
+                onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
+              >
+                {" "}
+                Hire Me{" "}
+              </button>
+              <a href="navya.pdf" target="_blank" view="Navya Rajput.pdf">
+                <button className="btn-highlighted-btn">View Resume</button>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
+export default AboutMe;

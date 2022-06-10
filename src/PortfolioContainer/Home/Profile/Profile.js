@@ -1,17 +1,15 @@
 import React from "react";
-import Typical from "react-typical";
-import "../../../index.css";
+import ScrollService from ".././../../utilities/ScrollService";
 import "./Profile.css";
-import "../../../App.css";
-import ScrollService from "../../../utilities/ScrollService";
+import Typical from "react-typical";
 
-export default function Profile() {
+const Profile = () => {
   return (
     <div className="profile-container">
       <div className="profile-parent">
         <div className="profile-details">
           <div className="colz">
-            <div className="cols-icon">
+            <div className="colz-icon">
               <a
                 href="https://github.com/nrajput-github"
                 rel="opener noreferrer"
@@ -33,6 +31,7 @@ export default function Profile() {
               >
                 <i className="fa fa-instagram"></i>
               </a>
+
               <a
                 href="https://twitter.com/NavyaRajput20"
                 rel="opener noreferrer"
@@ -40,22 +39,19 @@ export default function Profile() {
               >
                 <i className="fa fas fa-twitter fa-lg"></i>
               </a>
-              {/* <a href="https://twitter.com/NavyaRajput20">
-              <i className="fa fa-twitter-square"></i>
-              </a> */}
             </div>
           </div>
-
           <div className="profile-details-name">
             <span className="primary-text">
               {" "}
-              Hi I'am <span className="highlighted-text">Navya</span>
+              Hello, I'M <span className="highlighted-text">Navya</span>
             </span>
           </div>
           <div className="profile-details-role">
             <span className="primary-text">
               {" "}
               <h1>
+                {" "}
                 <Typical
                   loop={Infinity}
                   steps={[
@@ -73,21 +69,21 @@ export default function Profile() {
                   ]}
                 />
               </h1>
-              <span className="profile-role-tagline">
-                Passion for building application with front and back end
-                operations.
-              </span>
+            </span>
+            <span className="profile-role-tagline">
+              Knack of building applications with front and back end operations.
             </span>
           </div>
           <div className="profile-options">
             <button
-              className="btn-primary-btn"
+              className="btn primary-btn"
               onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
             >
-              Hire Me
+              {" "}
+              Hire Me{" "}
             </button>
             <a href="navya.pdf" target="_blank" view="Navya Rajput.pdf">
-              <button className="btn-highlighted-btn">View Resume</button>
+              <button className="btn highlighted-btn"> Get Resume </button>
             </a>
           </div>
         </div>
@@ -97,4 +93,5 @@ export default function Profile() {
       </div>
     </div>
   );
-}
+};
+export default Profile;

@@ -3,7 +3,6 @@ import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
 import "./Resume.css";
-// import shapebg from "../../../src/img/Testimonial/shape-bg.png";
 
 const Resume = (props) => {
   /* STATES */
@@ -58,6 +57,8 @@ const Resume = (props) => {
     { skill: "React Native", ratingPercentage: 85 },
     { skill: "Express JS", ratingPercentage: 89 },
     { skill: "Node JS", ratingPercentage: 89 },
+    { skill: "Mongo Db", ratingPercentage: 70 },
+    { skill: "Core Java", ratingPercentage: 80 },
     { skill: "HTML", ratingPercentage: 80 },
     { skill: "CSS", ratingPercentage: 80 },
   ];
@@ -67,95 +68,66 @@ const Resume = (props) => {
       title: "Interview Schedular",
       gitlink: "https://github.com/nrajput-github/scheduler",
       duration: { fromDate: "2021", toDate: "2021" },
-      description: "Tech Stack: React JS, Bootsrap.",
+      description:
+        "Implemented full-stack application that created fast Axios API interactions for querying the database that allow users to book and cancel interviews.",
+      subHeading: "Tech Stack: React JS, Bootsrap.",
     },
-    // subHeading: "Tech Stack: React JS, Bootsrap.",
-
     {
       title: "YelpLike ",
       gitlink: "https://github.com/christinetw/final_project",
       duration: { fromDate: "2021", toDate: "2021" },
       description:
-        "Tech Stack: Ruby, Rails, Javascript, React, HTML/CSS, Bootstrap, Google Map API.",
-      // subHeading:
-      //   "Tech Stack: Ruby, Rails, Javascript, React, HTML/CSS, Bootstrap, Google Map API.",
+        "A full-stack application designed to check restaurant ratings and reviews online.",
+      subHeading:
+        "Tech Stack: Ruby, Rails, Javascript, React, HTML/CSS, Bootstrap, Google Map API",
     },
     {
-      title: "Tweeter ",
-      gitlink: "https://github.com/nrajput-github/tweeter",
-      duration: { fromDate: "2021", toDate: "2021" },
-      description: "Tech Stack: HTML, CSS, JS, jQuery and AJAX.",
-      // subHeading: "Tech Stack: HTML, CSS, JS, jQuery and AJAX.",
-    },
-    {
-      title: "QuizApp ",
-      gitlink: "https://github.com/ghelle2h/quiz_app",
+      title: "Quiz App ",
+      gitLink: "https://github.com/ghelle2h/quiz_app",
       duration: { fromDate: "2021", toDate: "2021" },
       description:
+        "An online playing Quiz app, also where users can create their own quizzes list.",
+      subHeading:
         "Tech Stack: EJS, Javascript, Ajax, Express, Jquery, HTML/CSS, Saas, BootStrap, and PostgreSQL.",
-      //   "Tech Stack: EJS, Javascript, Ajax, Express, Jquery, HTML/CSS, Saas, BootStrap, and PostgreSQL.",
     },
   ];
 
   const resumeDetails = [
     /* EDUCATION */
-    <div
-      className="resume-screen-container education-container"
-      key="education"
-    >
-      <span>
-        <br />
-        <span />
-        <ResumeHeading
-          heading={"Lighthouse Labs, Ottawa"}
-          subHeading={"Full-Stack Web Development"}
-          fromDate={"2021"}
-          toDate={"2021"}
-        />
-      </span>
-      <br />
-      <span>
-        <ResumeHeading
-          heading={"Jayoti Vidhyapeeth Women's University, Jaipur"}
-          subHeading={"Masters of Business Administration"}
-          fromDate={"2011"}
-          toDate={"2013"}
-        />
-      </span>
-
-      {/* <ResumeHeading
-        heading={"High School "}
-        subHeading={"Command Secondary School Mbiri"}
-        fromDate={"2007"}
-        toDate={"2012"}
-      /> */}
+    <div className="resume-screen-container" key="education">
+      <ResumeHeading
+        heading={"Lighthouse Labs Canada"}
+        subHeading={"Web Development"}
+        fromDate={"2021"}
+        toDate={"2021"}
+      />
+      <ResumeHeading
+        heading={"Jayoti Vidhyapeeth Women's University"}
+        subHeading={"Masters of Business Administration"}
+        fromDate={"2011"}
+        toDate={"2013"}
+      />
     </div>,
-
     /* WORK EXPERIENCE */
-    <div
-      className="resume-screen-container work-experience-container"
-      key="work-experience"
-    >
+    <div className="resume-screen-container" key="work-experience">
       <div className="experience-container">
         <ResumeHeading
-          heading={"Freelancing"}
-          subHeading={"FRONT END DEVELOPER"}
+          heading={"Contract"}
+          subHeading={"JUNIOR FULL STACK DEVELOPER"}
           fromDate={"2021"}
           toDate={"Present"}
         />
         <div className="experience-description">
           <span className="resume-description-text">
-            - Currently working as a front-end web developer and my role
-            involves developing and testing the React.js frontend. The website
-            involves sign-in and prompting users to answer a series of
-            questions.On submission, the data is posted to a microservice
-            running on a separate server that interacts with a third-party API
-            and generates the pdf.
+            - Developing a website that is based on processing Legal Documents
+            (Agreements, Divorce, Child Custody, etc). The website involves
+            prompting users to answer a series of questions and helps to fill
+            out Ontario Court Forms as per their requirements.
           </span>
         </div>
-
+        <br />
         <ResumeHeading
-          heading={"Adecco Ottawa"}
+          heading={"Adecco"}
           subHeading={"Recruitment Assistant"}
           fromDate={"2020"}
           toDate={"2021"}
@@ -166,34 +138,9 @@ const Resume = (props) => {
             candidates through ATS and scheduled interviews with the candidates.
           </span>
         </div>
-        {/* <div className="experience-container">
-        <ResumeHeading
-          heading={"Adecco Ottawa"}
-          subHeading={"Recruitment Assistant"}
-          fromDate={"2020"}
-          toDate={"2021"}
-        />
-        <div className="experience-description">
-          <span className="resume-description-text">
-            - Assisted senior recruiter in recruitment processes as search
-            candidates through ATS and scheduled interviews with the candidates.
-          </span>
-        </div> */}
-        {/* <div className="experience-description">
-          <span className="resume-description-text">
-            - The website involves sign-in and prompting users to answer a
-            series of questions.
-          </span>
-          <br />
-          <span className="resume-description-text">
-            - On submission, the data is posted to a microservice running on a
-            separate server that interacts with a third-party API and generates
-            the pdf.
-          </span>
-          <br />
-        </div> */}
       </div>
     </div>,
+    // for the space put br after every div or span
     /* PROGRAMMING SKILLS */
     <div
       className="resume-screen-container programming-skills-container"
@@ -211,17 +158,12 @@ const Resume = (props) => {
           </div>
         </div>
       ))}
-      <br />
     </div>,
-
     /* PROJECTS */
-
-    <div className="resume-screen-container projects-container" key="projects">
-      <span></span>
+    <div className="resume-screen-container" key="projects">
       {projectsDetails.map((projectsDetails, index) => (
         <ResumeHeading
           key={index}
-          // heading={projectsDetails.title}
           heading={
             <a
               className="git-link"
@@ -239,26 +181,25 @@ const Resume = (props) => {
         />
       ))}
     </div>,
-
     /* Interests */
-    <div
-      className="resume-screen-container interests-container"
-      key="interests"
-    >
+    <div className="resume-screen-container" key="interests">
       <ResumeHeading
-        heading="Art and Crafting"
+        heading="Art and Craft"
         description="In my spare time, I love to do art and crafting and some DIYs."
       />
       <ResumeHeading
         heading="Dancing & Music"
         description="I love dancing and listening soothing music. It keeps me relax and stree free."
       />
-      <ResumeHeading heading="Photography" description="I like photography." />
+      <ResumeHeading
+        heading="Photography"
+        description="I love travel and loved to capture scenic view"
+      />
     </div>,
   ];
 
   const handleCarousal = (index) => {
-    let offsetHeight = 330;
+    let offsetHeight = 360;
 
     let newCarousalOffset = {
       style: { transform: "translateY(" + index * offsetHeight * -1 + "px)" },
@@ -311,7 +252,7 @@ const Resume = (props) => {
       id={props.id || ""}
     >
       <div className="resume-content">
-        <ScreenHeading title={"Resume"} subHeading={"My brief Summary"} />
+        <ScreenHeading title={"Resume"} subHeading={"My formal Bio Details"} />
         <div className="resume-card">
           <div className="resume-bullets">
             <div className="bullet-container">
@@ -323,9 +264,6 @@ const Resume = (props) => {
           <div className="resume-bullet-details">{getResumeScreens()}</div>
         </div>
       </div>
-      {/* <div className="resume-footer-image">
-        <img src={shapebg} alt="Photo not responding" />
-      </div> */}
     </div>
   );
 };

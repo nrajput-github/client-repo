@@ -1,29 +1,27 @@
+/* working fine without hover properties so just will add later if hover functionality dosn't work  */
+
 .about-me-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10px 0 0 0;
+  /* margin: 10px 0 0 0;
   padding-bottom: 30px;
-  padding-top: 20px;
-  
+  padding-top: 20px; */
+  margin: 50px 0 0 0;
 }
 .about-me-parent {
   max-width: 1000px;
-  width: 100%;
-  margin-right: 100px;
+  width: 70%;
 }
 .about-me-card {
   display: flex;
-  width: 1100px;
-  box-shadow: 0 0px 40px -2px rgb(251, 145, 212);
+  width: 100%;
+  box-shadow: 0 0px 20px -2px #1f2235;
   background-color: #969a9b;
-  /* background-color: #555661; */
   border-radius: 25px;
-  padding-right: auto;
+  /* padding-right: auto; */
   border: 3px solid rgb(9, 10, 9);
-
-  /* background-image: url("../../assets/AboutMe/istockphoto.jpg"); */
 }
 .highlight-heading {
   font-size: 18px;
@@ -38,74 +36,76 @@
   background-position: center;
   border-radius: 10px;
   background-image: url("../../assets/AboutMe/about.jpg");
-  /* box-shadow: 0 0px 30px -2px #06d2fb; */
+  box-shadow: 0 0px 30px -2px #e6b9de;
 }
 .about-me-details {
-  width: 100%;
+  width: 48%;
   text-align: justify;
   padding: 30px;
-  padding-bottom: 0%;
+  /* padding-bottom: 0%; */
 }
 .about-me-description {
-  font-size: 14px;
+  font-size: 12px;
   color: #040404;
-  /* color: #f5b70d; */
 }
 .about-me-highlights {
   margin: 30px 0;
 }
-/* .highlght-heading {
+.highlght-heading {
   font-family: "Poppins Bold";
   font-size: 14px;
   margin: 0 0 5px 0;
-  color: #09abb1;
-} */
+  color: #c4e813;
+}
 .highlight {
   display: flex;
   align-items: center;
-  margin: 5px;
+  margin: 5px 0;
   font-size: 12px;
   color: #0b0b0a;
-  padding-bottom: 2px;
+  /* padding-bottom: 2px; */
+}
+/* primary btn styling is not supporting this */
+.about-me-options .btn-primary-btn {
+  border-radius: 2px;
+  padding: 8px 0;
+  width: 100px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: "Poppins SemiBold";
+  font-size: 12px;
+  color: purple;
+  border: 2px solid purple;
+  background-color: #0b0c0c;
 }
 
-.btn-primary-btn {
-  border-radius: 50px;
-  margin-top: 30px;
-  padding: 14px 0;
-  width: 160px;
-  cursor: pointer;
-  transition: 0.2s;
-  font-family: "Poppins SemiBold";
-  color: #23e5ff;
-  border: 2px solid #23e5ff;
-  background-color: rgb(68, 69, 70);
-  box-shadow: 0 0px 20px -2px #18def8;
-}
-.btn-primary-btn:hover {
-  color: #f5c21b;
+.about-me-options .btn-primary-btn:hover {
+  color: aliceblue;
   border: 2px solid #f7e709;
   background-color: #000000;
+  transition: all 0.3s linear;
+  box-shadow: 2px 5px 3px 0px rgb(255, 255, 255);
 }
-.btn-highlighted-btn {
+.about-me-options .btn-highlighted-btn {
   margin-left: 28px;
-  border-radius: 50px;
-  margin-top: 30px;
-  padding: 14px 0;
-  width: 160px;
+  border-radius: 2px;
+  padding: 7px 0;
+  width: 100px;
   cursor: pointer;
   transition: 0.2s;
   font-family: "Poppins SemiBold";
-  color: #23e5ff;
-  border: 2px solid #23e5ff;
-  background-color: rgb(68, 69, 70);
-  box-shadow: 0 0px 20px -2px #18def8;
+  font-size: 12px;
+  color: purple;
+  border: 2px solid purple;
+  background-color: #0b0c0c;
 }
-.btn-highlighted-btn:hover {
-  margin: 0 0 0 28px;
-  color: #f5c21b;
+
+.about-me-options .btn-highlighted-btn:hover {
+  color: aliceblue;
   border: 2px solid #f7e709;
   background-color: #000000;
+  transition: all 0.3s linear;
+  box-shadow: 2px 5px 3px 0px rgb(255, 255, 255);
 }
 
 .highlight-blob {
@@ -114,16 +114,15 @@
   margin: 0 10px 0 0;
   background-color: #09abb1;
   border-radius: 50%;
-  margin-bottom: 5px;
 }
-.about-me-options .highlighted-btn {
+.about-me-options .btn-highlighted-btn {
   margin: 0 0 0 30px;
 }
 
 /*IPAD PRO RESPONSIVENESS*/
 @media only screen and (max-width: 1110px) {
   .about-me-parent {
-    width: 90%;
+    width: 88%;
   }
 }
 @media only screen and (max-width: 898px) {
@@ -142,7 +141,7 @@
   .about-me-options .btn-highlighted-btn {
     margin: 24px 0 0 0 !important;
   }
-  .about-me-options btn-highlighted-btn {
+  .about-me-options button {
     width: 100%;
   }
 }

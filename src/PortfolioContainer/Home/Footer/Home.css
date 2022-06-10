@@ -1,10 +1,11 @@
-.home-container {
+/* .home-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 50vh !important;
   min-height: 670px;
-  box-shadow: 0 0px 20px -2px #07b9e6;
+  box-shadow: 0 0px 20px -2px #e65c07; */
   /* background-image: url("../../../assets//Home/45-fabricdark.png"); */
-  background-color: black;
-}
+  /* background: black
+  
+} */

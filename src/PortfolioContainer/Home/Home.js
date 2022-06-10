@@ -5,12 +5,14 @@ import Header from "./Header/Header";
 
 import "./Home.css";
 
-export default function Home() {
+function Home(props) {
   return (
-    <div className="home-container">
+    <div className="home-container" id={props.id || ""}>
       <Header />
       <Profile />
       <Footer />
     </div>
   );
 }
+
+export default Home;

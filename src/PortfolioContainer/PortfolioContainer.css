@@ -1,4 +1,5 @@
-.portfolio-container{
+.portfolio-container {
   /* background-image: url("../assets/Home/45-degree-fabric.png"); */
   height: 100vh;
-  }
+  background-color: black;
+}

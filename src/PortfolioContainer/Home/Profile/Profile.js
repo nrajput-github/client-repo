@@ -57,15 +57,15 @@ const Profile = () => {
                   steps={[
                     "Full-Stack Developer",
                     ,
-                    7000,
+                    5000,
                     "Experience in Backend & Frontend ",
-                    7000,
+                    5000,
                     "Javascript Dev ",
-                    7000,
+                    5000,
                     "React.Js Dev",
-                    7000,
+                    5000,
                     "Node.js/Express.js ",
-                    7000,
+                    5000,
                   ]}
                 />
               </h1>

@@ -19,8 +19,10 @@ const AboutMe = (props) => {
     highlights: {
       bullets: [
         "Full Stack Web Developer",
-        "Interactive Front-end as per design",
-        "Proficient in programming languages, modern front-end, back-end plus testing frameworks",
+        " Interactive Front-end as per design",
+        " Proficient in programming languages.",
+
+        " Modern front-end and back-end testing frameworks",
         "Core is React.Js",
         "Redux for state management",
         "Building Rest API",

@@ -82,13 +82,13 @@ const Resume = (props) => {
         "Tech Stack: Ruby, Rails, Javascript, React, HTML/CSS, Bootstrap, Google Map API",
     },
     {
-      title: "Quiz App ",
-      gitLink: "https://github.com/ghelle2h/quiz_app",
+      title: "Quiz App",
+      gitlink: "https://github.com/ghelle2h/quiz_app",
       duration: { fromDate: "2021", toDate: "2021" },
       description:
-        "An online playing Quiz app, also where users can create their own quizzes list.",
+        "A full-stack application designed to check restaurant ratings and reviews online.",
       subHeading:
-        "Tech Stack: EJS, Javascript, Ajax, Express, Jquery, HTML/CSS, Saas, BootStrap, and PostgreSQL.",
+        "Tech Stack: Ruby, Rails, Javascript, React, HTML/CSS, Bootstrap, Google Map API",
     },
   ];
 

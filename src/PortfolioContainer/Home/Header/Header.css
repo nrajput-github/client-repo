@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   height: 140px;
-  color: var(--white);
+  color: purple;
   /* position: fixed;
   top: 0;
   width: 100%; */
@@ -14,7 +14,7 @@
   justify-content: space-around;
   height: 100%;
   width: 70%;
-  color: var(--white);
+  color: purple;
 }
 .header-logo {
   font-size: 50px;
@@ -24,7 +24,6 @@
 .header-options {
   display: flex;
   align-items: center;
-  
 }
 .header-option {
   font-size: 16px;
@@ -33,13 +32,14 @@
 }
 .header-option:hover {
   border-radius: 5px;
+  color: rgb(250, 206, 61);
   transition: all 0.3s linear;
   box-shadow: 2px 5px 3px 0px rgb(255, 255, 255);
 }
 
 .header-hamburger {
   display: none;
-  color: var(--white);
+  color: purple;
 }
 .header-option-seperator {
   margin: 0 50px 0 0;

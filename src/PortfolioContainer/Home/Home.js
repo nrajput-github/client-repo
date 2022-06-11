@@ -11,6 +11,22 @@ function Home(props) {
       <Header />
       <Profile />
       <Footer />
+      {/* <div className="icon">
+        <a href="https://web.facebook.com/choc.prince.1" className="facebook">
+          <i className="fa fa-facebook-f"></i> Facebook{" "}
+        </a>
+        <a
+          href="https://www.youtube.com/channel/UCSSr5ZDFbilpZ592_ycoAwA"
+          className="youtube"
+        >
+          {" "}
+          <i className="fa fa-youtube"></i>youtube
+        </a>
+        <a href="#" className="twitter">
+          {" "}
+          <i className="fa fa-twitter"></i> twitter{" "}
+        </a>
+      </div> */}
     </div>
   );
 }

@@ -81,22 +81,23 @@ body ::-webkit-scrollbar-thumb {
   background: hsla(0, 88%, 44%, 0.1);
 }
 
-.btn {
+/* .btn {
   border-radius: 2px;
-  padding: 14px 0;
+  padding: 14px 4px;
   margin-top: 20px;
   width: 160px;
   cursor: pointer;
   transition: 0.2s;
   font-family: "Poppins SemiBold";
-}
+} */
 
 .btn:active {
   transform: translateY(2px);
 }
 .primary-btn {
-  color: purple;
-  border: 2px solid purple;
+  margin: 0 0 0 28px;
+  color: rgb(0, 128, 15);
+  border: 2px solid rgb(15, 128, 0);
   font-size: 12px;
   background-color: transparent;
 }
@@ -106,17 +107,18 @@ body ::-webkit-scrollbar-thumb {
   }
 } */
 .primary-btn:hover {
+  margin: 0 0 0 28px;
   color: aliceblue;
   border: 2px solid #f7e709;
   background-color: #000000;
   transition: all 0.3s linear;
   box-shadow: 2px 5px 3px 0px rgb(255, 255, 255);
 }
-/* .highlighted-btn {
+.highlighted-btn {
   color: green;
   font-size: 12px;
   background-color: #ff5823;
-} */
+}
 /* @media only screen and (max-width: 414px) {
   .highlighted-btn {
     font-size:13px;

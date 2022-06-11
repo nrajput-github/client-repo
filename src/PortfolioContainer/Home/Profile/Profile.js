@@ -76,14 +76,14 @@ const Profile = () => {
           </div>
           <div className="profile-options">
             <button
-              className="btn primary-btn"
+              className="btn-primary-btn"
               onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
             >
               {" "}
               Hire Me{" "}
             </button>
             <a href="navya.pdf" target="_blank" view="Navya Rajput.pdf">
-              <button className="btn highlighted-btn"> Get Resume </button>
+              <button className="btn-highlighted-btn"> Get Resume </button>
             </a>
           </div>
         </div>

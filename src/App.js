@@ -1,6 +1,6 @@
 import React from "react";
 import PortfolioContainer from "./PortfolioContainer/PortfolioContainer";
-// import { LoaderBar } from "./utilities/commonUtils";
+import { LoaderBar } from "./utilities/commonUtils";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 
@@ -12,6 +12,7 @@ function App() {
     <div className="App">
       {/* <Home /> */}
       <ToastContainer />
+      <LoaderBar />
       <PortfolioContainer />
     </div>
   );

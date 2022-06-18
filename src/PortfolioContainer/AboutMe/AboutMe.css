@@ -6,9 +6,9 @@
   justify-content: center;
   align-items: center;
   /* margin: 10px 0 0 0;
-  padding-bottom: 30px;
-  padding-top: 20px; */
-  margin: 50px 0 0 0;
+  padding-bottom: 30px; */
+  /* padding-top: 20px; */
+  /* margin: 50px 0 0 0; */
 }
 .about-me-parent {
   max-width: 1000px;
@@ -17,12 +17,16 @@
 .about-me-card {
   display: flex;
   width: 100%;
-  box-shadow: 0 0px 30px -2px #f5c905;
-  background-color: transparent;
+  box-shadow: 0 0px 30px -2px #e2e0d8;
+  background: rgb(5, 5, 70);
   border-radius: 12px;
+  border: 20px solid rgb(0, 0, 0);
+
   /* padding-right: auto; */
   /* border: 3px solid purple; */
   /* border: 3px solid rgb(9, 10, 9); */
+}
+.about-me-card:hover {
 }
 .highlight-heading {
   font-size: 18px;
@@ -48,6 +52,7 @@
 .about-me-description {
   font-size: 12px;
   color: #05899d;
+  /* color: #05899d; */
   /* color: purple; */
 }
 .about-me-highlights {
@@ -71,7 +76,7 @@
   transition: 0.2s;
   font-family: "Poppins SemiBold";
   font-size: 12px;
-  color: purple;
+  color: #05899d;
   border: 2px solid purple;
   background-color: transparent;
 }
@@ -92,7 +97,7 @@
   transition: 0.2s;
   font-family: "Poppins SemiBold";
   font-size: 12px;
-  color: purple;
+  color: #05899d;
   border: 2px solid purple;
   background-color: transparent;
 }

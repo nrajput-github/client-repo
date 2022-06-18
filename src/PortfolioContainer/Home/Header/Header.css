@@ -2,7 +2,9 @@
   display: flex;
   justify-content: center;
   height: 140px;
-  color: purple;
+  /* color: purple; */
+  /* background-color: rgb(125, 121, 89); */
+  background-color: rgb(12, 12, 12);
   /* position: fixed;
   top: 0;
   width: 100%; */
@@ -16,11 +18,11 @@
   width: 70%;
   color: purple;
 }
-.header-logo {
+/* .header-logo {
   font-size: 50px;
   font-family: "Poppins ExtraBold";
   color: var(--white);
-}
+} */
 .header-options {
   display: flex;
   align-items: center;

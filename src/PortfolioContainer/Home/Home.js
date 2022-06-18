@@ -11,22 +11,34 @@ function Home(props) {
       <Header />
       <Profile />
       <Footer />
-      {/* <div className="icon">
-        <a href="https://web.facebook.com/choc.prince.1" className="facebook">
+      <div className="icon">
+        <a
+          href="https://www.facebook.com/navya.chauhan20/"
+          rel="opener noreferrer"
+          target="_blank"
+          className="facebook"
+        >
           <i className="fa fa-facebook-f"></i> Facebook{" "}
         </a>
         <a
-          href="https://www.youtube.com/channel/UCSSr5ZDFbilpZ592_ycoAwA"
-          className="youtube"
+          href="https://www.instagram.com/navyachauhan20/?hl=en"
+          rel="opener noreferrer"
+          target="_blank"
+          className="instagram"
         >
-          {" "}
-          <i className="fa fa-youtube"></i>youtube
+          <i className="fa fa-instagram"></i> Instagram{" "}
         </a>
-        <a href="#" className="twitter">
+
+        <a
+          href="https://twitter.com/NavyaRajput20"
+          rel="opener noreferrer"
+          target="_blank"
+          className="twitter"
+        >
           {" "}
           <i className="fa fa-twitter"></i> twitter{" "}
         </a>
-      </div> */}
+      </div>
     </div>
   );
 }

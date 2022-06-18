@@ -4,12 +4,14 @@
   justify-content: space-between;
   height: 100vh !important;
   min-height: 400px;
-  border: 2px solid purple;
-  background: black;
+  /* border: 2px solid purple; */
+  background: rgb(5, 5, 70);
+  /* background-color: rgb(156, 237, 211); */
+  /* background-color: "../assets/Home/Profile/backwallpaper.jpg"; */
 }
 
 .icon {
-  top: 30%;
+  top: 50%;
   position: absolute;
   text-align: right;
   right: 0;
@@ -19,6 +21,7 @@
   flex-direction: column;
   margin-top: 240px;
   z-index: 900;
+  position: fixed;
 }
 @media only screen and (min-width: 475px) {
   .icon {
@@ -29,7 +32,7 @@
   text-align: left;
   text-decoration: none;
   text-transform: uppercase;
-  color: #fff;
+  color: rgb(255, 255, 255);
   font-weight: 1000;
   padding: 10px;
   font-size: 14px;
@@ -40,15 +43,15 @@
   z-index: 900;
 }
 .icon a:hover {
-  border: 0.5px solid #ff5823;
+  border: 0.5px solid purple;
   transform: translate(50px, 0px);
 }
 .icon a i {
   margin-right: 25px;
-  background-color: white;
-  height: 40px;
-  width: 40px;
-  color: black;
+  background-color: rgb(58, 53, 53);
+  height: 30px;
+  width: 30px;
+  color: rgb(67, 65, 65);
   text-align: center;
   line-height: 40px;
   border-radius: 50%;
@@ -70,12 +73,15 @@
 .icon a i.fa-twitter {
   color: #2c80d3;
 }
+.icon a i.fa-instagram {
+  color: purple;
+}
 .facebook {
   background-color: #1f2235;
   color: white;
 }
-.youtube {
-  color: #fa0910;
+.instagram {
+  color: purple;
 }
 .twitter {
   color: #53c5ff;

@@ -5,21 +5,29 @@ import {
   faLinkedin,
   faGithub,
   faInstagram,
+  faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer = () => {
   /* SOCIALS STATIC DATA */
   let socialDetails = [
-    { icon: faFacebook, link: "https://web.facebook.com/choc.prince.1" },
     {
       icon: faLinkedin,
-      link: "https://www.linkedin.com/in/okwuose-ehiedu-7b8923198/",
+      link: "https://www.linkedin.com/in/navya-rajput-9627aa165",
     },
     //   { icon: faGithub, link: '' },
     {
       icon: faInstagram,
-      link: "https://www.instagram.com/instructor_ehizeex/",
+      link: "https://www.instagram.com/navyachauhan20/?hl=en",
+    },
+    {
+      icon: faGithub,
+      link: "https://github.com/nrajput-github",
+    },
+    {
+      icon: faTwitter,
+      link: "https://twitter.com/NavyaRajput20",
     },
   ];
 

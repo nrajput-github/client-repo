@@ -61,8 +61,6 @@ export default function ContactMe(props) {
     } catch (error) {
       console.log(error);
     }
-
-    // console.log(data);
   };
 
   return (

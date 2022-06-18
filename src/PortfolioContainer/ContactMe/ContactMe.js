@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import Typical from "react-typical";
 import axios from "axios";
 import { toast } from "react-toastify";
-
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 import imgBack from "../../../src/images/email1.jpeg";
 import load1 from "../../../src/images/load2.gif";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
@@ -35,34 +36,29 @@ export default function ContactMe(props) {
   };
   console.log(name);
 
-  const submitForm = async (e) => {
+  const form = useRef();
+  const sendEmail = (e) => {
     e.preventDefault();
-    try {
-      let data = {
-        name,
-        email,
-        message,
-      };
-      setBool(true);
-      const res = await axios.post(`/contact`, data);
-      if (name.length === 0 || email.length === 0 || message.length === 0) {
-        setBanner(res.data.msg);
-        toast.error(res.data.msg);
-        setBool(false);
-      } else if (res.status === 200) {
-        setBanner(res.data.msg);
-        toast.success(res.data.msg);
-        setBool(false);
-
-        setName("");
-        setEmail("");
-        setMessage("");
-      }
-    } catch (error) {
-      console.log(error);
-    }
+    console.log("sending email ....");
+    emailjs
+      .sendForm(
+        "service_dhxqtl3",
+        "template_jif7ac5",
+        form.current,
+        "uM6sRfXmSmt6xvEzG"
+      )
+      .then(
+        () => {
+          alert("Message successfully sent!");
+          console.log("sending pass ....");
+          window.location.reload(false);
+        },
+        () => {
+          alert("Failed to send the message, please try again");
+          console.log("sending fail ....");
+        }
+      );
   };
-
   return (
     <div className="main-container fade-in" id={props.id || ""}>
       <ScreenHeading subHeading={"Lets keep In Touch"} title={"Contact Me"} />
@@ -89,7 +85,7 @@ export default function ContactMe(props) {
             <h4>Send Your Email Here</h4>
             <img src={imgBack} alt="image not found" />
           </div>
-          <form onSubmit={submitForm}>
+          <form ref={form} onSubmit={sendEmail}>
             <p>{banner}</p>
             <label htmlFor="name">Name</label>
             <input type="text" onChange={handleName} value={name} />

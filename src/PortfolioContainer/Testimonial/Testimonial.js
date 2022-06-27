@@ -121,7 +121,7 @@ export default function Testimonial(props) {
                       Github
                     </a>
                     <a
-                      href="http://stage.pixeltechlab.co.in/"
+                      href="https://scheduler-navya-client.netlify.app/"
                       className="btn primary-btn"
                       target="_blank"
                     >

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -12,7 +12,7 @@ import Img2 from "../../../src/assets/Projects/project2.png";
 import Img3 from "../../../src/assets/Projects/project3.png";
 import Img4 from "../../../src/assets/Projects/project4.jpeg";
 
-export default function Projects(props) {
+const Projects = (props) => {
   let fadeInScreenHandler = (screen) => {
     if (screen.fadeScreen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
@@ -42,113 +42,136 @@ export default function Projects(props) {
       },
     },
   };
+  useEffect(() => {
+    return () => {
+      /* UNSUBSCRIBE THE SUBSCRIPTIONS */
+      fadeInSubscription.unsubscribe();
+    };
+  }, [fadeInSubscription]);
 
   return (
-    <>
-      <ScreenHeading title={"Projects"} subHeading={"My Works"} />
+      <>
+        <ScreenHeading title={"Projects"} subHeading={"My Works"} />
 
-      <section className="testimonial-section" id={props.id || ""}>
-        <div className="container">
-          <div className="row">
-            <OwlCarousel
-              className="owl-carousel"
-              id="testimonial-carousel"
-              {...options}
-            >
-              <div className="col-lg-12">
-                <div className="testi-item">
-                  <div className="testi-comment">
-                    {/* testi-comment will remove later  */}
-                    {/* <article className="portfolio-item"> */}
-                    {/* <div className="portfolio-item-image"> */}
-                    <img src={Img1} alt=""></img>
-                    {/* </div> */}
+        <section className="project-section" id={props.id || ""}>
+          <div className="container">
+            <div className="row">
+              <OwlCarousel
+                className="owl-carousel"
+                id="project-carousel"
+                {...options}
+              >
+                <div className="col-lg-12">
+                  <div className="testi-item">
+                    <div className="testi-comment">
+                      {/* testi-comment will remove later  */}
 
-                    <div className="client-info">
-                      <h5>Yelp like</h5>
-                      <a
-                        href="https://github.com/nrajput-github"
-                        className="btn primary-btn"
-                        target="_blank"
-                      >
-                        Github
-                      </a>
-                      <a
-                        href="http://stage.pixeltechlab.co.in/"
-                        className="btn primary-btn"
-                        target="_blank"
-                      >
-                        Live Demo
-                      </a>
+                      <img src={Img1} alt=""></img>
+
+                      <div className="client-info">
+                        <h5>LSR Project</h5>
+                        <a
+                          href="https://github.com/nrajput-github"
+                          className="btn primary-btn"
+                          target="_blank"
+                        >
+                          Github
+                        </a>
+                        <a
+                          href="http://stage.pixeltechlab.co.in/"
+                          className="btn primary-btn"
+                          target="_blank"
+                        >
+                          Live Demo
+                        </a>
+                      </div>
+                      {/* </article> */}
                     </div>
-                    {/* </article> */}
                   </div>
                 </div>
-              </div>
-              <div className="col-lg-12">
-                <div className="testi-item">
-                  <div className="testi-comment">
-                    {/* testi-comment will remove later  */}
-                    {/* <article className="portfolio-item"> */}
-                    {/* <div className="portfolio-item-image"> */}
-                    <img src={Img1} alt=""></img>
-                    {/* </div> */}
+                <div className="col-lg-12">
+                  <div className="testi-item">
+                    <div className="testi-comment">
+                      <img src={Img3} alt=""></img>
 
-                    <div className="client-info">
-                      <h5>new project</h5>
-                      <a
-                        href="https://github.com/nrajput-github"
-                        className="btn primary-btn"
-                        target="_blank"
-                      >
-                        Github
-                      </a>
-                      <a
-                        href="http://stage.pixeltechlab.co.in/"
-                        className="btn primary-btn"
-                        target="_blank"
-                      >
-                        Live Demo
-                      </a>
+                      <div className="client-info">
+                        <h5>Yelp Like</h5>
+                        <a
+                          href="https://github.com/nrajput-github/YelpLike"
+                          className="btn primary-btn"
+                          target="_blank"
+                        >
+                          Github
+                        </a>
+                        <a
+                          href="http://stage.pixeltechlab.co.in/"
+                          className="btn primary-btn"
+                          target="_blank"
+                        >
+                          Live Demo
+                        </a>
+                      </div>
                     </div>
-                    {/* </article> */}
                   </div>
                 </div>
-              </div>
-              <div className="col-lg-12">
-                <div className="testi-item">
-                  <div className="testi-comment">
-                    {/* testi-comment will remove later  */}
-                    {/* <article className="portfolio-item"> */}
-                    {/* <div className="portfolio-item-image"> */}
-                    <img src={Img1} alt=""></img>
-                    {/* </div> */}
+                <div className="col-lg-12">
+                  <div className="testi-item">
+                    <div className="testi-comment">
+                      <img src={Img2} alt=""></img>
 
-                    <div className="client-info">
-                      <h5>Scheduler</h5>
-                      <a
-                        href="https://github.com/nrajput-github"
-                        className="btn primary-btn"
-                        target="_blank"
-                      >
-                        Github
-                      </a>
-                      <a
-                        href="http://stage.pixeltechlab.co.in/"
-                        className="btn primary-btn"
-                        target="_blank"
-                      >
-                        Live Demo
-                      </a>
+                      <div className="client-info">
+                        <h5>Scheduler</h5>
+                        <a
+                          href="https://github.com/nrajput-github/scheduler"
+                          className="btn primary-btn"
+                          target="_blank"
+                        >
+                          Github
+                        </a>
+                        <a
+                          href="http://stage.pixeltechlab.co.in/"
+                          className="btn primary-btn"
+                          target="_blank"
+                        >
+                          Live Demo
+                        </a>
+                      </div>
+                      {/* </article> */}
                     </div>
-                    {/* </article> */}
                   </div>
                 </div>
-              </div>
-            </OwlCarousel>
+                <div className="col-lg-12">
+                  <div className="testi-item">
+                    <div className="testi-comment">
+                      <img src={Img4} alt=""></img>
+
+                      <div className="client-info">
+                        <h5>Quiz App</h5>
+                        <a
+                          href="https://github.com/ghelle2h/quiz_app"
+                          className="btn primary-btn"
+                          target="_blank"
+                        >
+                          Github
+                        </a>
+                        <a
+                          href="http://stage.pixeltechlab.co.in/"
+                          className="btn primary-btn"
+                          target="_blank"
+                        >
+                          Live Demo
+                        </a>
+                      </div>
+                      {/* </article> */}
+                    </div>
+                  </div>
+                </div>
+              </OwlCarousel>
+            </div>
           </div>
-        </div>
-      </section>
-    </>
+        </section>
+      </>
+  
   );
-}
+};
+export default Projects;

@@ -4,7 +4,7 @@
   height: 140px;
   /* color: purple; */
   /* background-color: rgb(125, 121, 89); */
-  background-color: rgb(12, 12, 12);
+  background-color: #3f4a31;
   /* position: fixed;
   top: 0;
   width: 100%; */
@@ -16,7 +16,7 @@
   justify-content: space-around;
   height: 100%;
   width: 70%;
-  color: purple;
+  color: burlywood;
 }
 /* .header-logo {
   font-size: 50px;
@@ -34,21 +34,21 @@
 }
 .header-option:hover {
   border-radius: 5px;
-  color: rgb(250, 206, 61);
+  color: black;
   transition: all 0.3s linear;
   box-shadow: 2px 5px 3px 0px rgb(255, 255, 255);
 }
 
 .header-hamburger {
   display: none;
-  color: purple;
+  color: burlywood;
 }
 .header-option-seperator {
   margin: 0 50px 0 0;
-  color: var(--white);
+  color: burlywood;
 }
 .selected-header-option {
-  color: rgb(250, 206, 61);
+  color: whitesmoke;
 }
 
 /*IPAD PRO RESPONSIVENESS*/

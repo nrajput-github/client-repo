@@ -48,7 +48,7 @@ const Header = () => {
     let screenComponent = document.getElementById(screen.screen_name);
     if (!screenComponent) return;
 
-    screenComponent.scrollIntoView({ behavior: "smooth" });
+   screenComponent.scrollIntoView({ behavior: "smooth" });
     setSelectedScreen(index);
     setShowHeaderOptions(false);
   };

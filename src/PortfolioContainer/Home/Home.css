@@ -4,10 +4,8 @@
   justify-content: space-between;
   height: 100vh !important;
   min-height: 400px;
-  /* border: 2px solid purple; */
-  background: rgb(5, 5, 70);
-  /* background-color: rgb(156, 237, 211); */
-  /* background-color: "../assets/Home/Profile/backwallpaper.jpg"; */
+  /* background-color: red; */
+  /* background-image: url("../../assets/Home/Artist.jpeg"); */
 }
 
 .icon {
@@ -34,7 +32,7 @@
   text-transform: uppercase;
   color: rgb(255, 255, 255);
   font-weight: 1000;
-  padding: 10px;
+  padding: 8px;
   font-size: 14px;
   font-family: "oswald", "sans-serif";
   border-radius: 50px 0px 0px 50px;
@@ -43,7 +41,7 @@
   z-index: 900;
 }
 .icon a:hover {
-  border: 0.5px solid purple;
+  border: 1px solid burlywood;
   transform: translate(50px, 0px);
 }
 .icon a i {
@@ -77,8 +75,8 @@
   color: purple;
 }
 .facebook {
-  background-color: #1f2235;
-  color: white;
+  background-color: transparent;
+  color: whitesmoke;
 }
 .instagram {
   color: purple;

@@ -2,6 +2,9 @@
   min-height: 100vh;
   /* padding-top: 5px; */
 }
+.central-form:hover {
+  background-color: transparent;
+}
 .central-form {
   max-width: 1100px;
   padding: 10px;
@@ -10,12 +13,12 @@
   margin: 0 auto;
   flex-direction: column;
   justify-content: center;
-  background-color: #080808;
-  box-shadow: 0 0px 30px -2px #f5c905;
+  background-color: black;
+  box-shadow: 0 0px 30px -2px whitesmoke;
 }
 .central-form h2 {
   /* color: #23e5ff; */
-  color: purple;
+  color: #475535;
   letter-spacing: 0.2rem;
   margin-bottom: 20px;
 }
@@ -28,7 +31,7 @@
   margin-bottom: 20px;
 }
 .img-back h4 {
-  color: purple;
+  color: burlywood;
   letter-spacing: 0.3rem;
   font-weight: 400;
   font-size: 18px;
@@ -46,27 +49,27 @@
   justify-content: center;
   flex-direction: column;
   margin-top: -52px;
-  background-color: #06535e;
+  background-color: #5d6c4d;
   border-radius: 12px;
 }
 form p {
   text-align: center;
   margin-bottom: 10px;
-  color: purple;
+  color: whi;
   letter-spacing: 0.4rem;
   font-family: "Poppins Bold";
 }
 form label {
   margin-bottom: 5px;
   letter-spacing: 0.2rem;
-  columns: #111;
+  columns: rgb(249, 237, 237);
 }
 form input,
 textarea {
   width: 100%;
-  border: 2px solid purple;
+  border: 2px solid #475535;
   outline: none;
-  background-color: black;
+  background-color: transparent;
   padding: 0.5rem 1 rem;
   font-size: 1.1rem;
   margin-bottom: 22px;
@@ -74,11 +77,11 @@ textarea {
   transition: 0.3s;
 }
 textarea:focus {
-  border: 2px solid purple;
+  border: 2px solid #475535;
   background-color: white;
 }
 input:focus {
-  border: 2px solid purple;
+  border: 2px solid #475535;
   background-color: white;
 }
 form button {
@@ -89,16 +92,16 @@ form button {
   cursor: pointer;
   transition: 0.2s;
   font-family: "Poppins SemiBold";
-  color: purple;
-  border: 2px solid purple;
-  background-color: black;
-  box-shadow: 0 0px 20px -2px #1f2235;
+  color: whitesmoke;
+  border: 2px solid #3f4a31;
+  background-color: #5d6c4d;
+  box-shadow: 0 0px 20px -2px whitesmoke;
 }
 form button:hover {
-  color: #f5c21b;
-  border: 2px solid #f7e709;
+  color: burlywood;
+  border: 2px solid burlywood;
   background-color: #000000;
- box-shadow: 2px 5px 3px 0px rgb(255, 255, 255);
+  box-shadow: 2px 5px 3px 0px rgb(255, 255, 255);
 }
 .img-back {
   flex: 1;
@@ -113,12 +116,12 @@ form button:hover {
 }
 .button .load img {
   width: 60px;
-  color: purple;
+  color: #475535;
 }
 
 .col i {
   padding: 7px;
-  color: rgb(8, 208, 223);
+  color: #475535;
 }
 .col i:hover {
   transform: scale(1.5);
